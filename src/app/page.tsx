@@ -5,7 +5,7 @@ export default function ScheherezadeLifeLanding() {
       {/* HERO */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <img
-          src="/Images/hero.jpg"
+          src="/images/hero.jpg"
           alt="Mediterranean atmosphere"
           className="absolute inset-0 w-full h-full object-cover"
         />
@@ -48,7 +48,7 @@ silence and refined perception.
 
         <div>
           <img
-            src="/Images/editorial.jpg"
+            src="/images/editorial.jpg"
             alt="Interior"
             className="object-cover brightness-108 saturate-135 contrast-95 sepia-[0.01] w-[830px] rounded-5xl"
           />
@@ -64,14 +64,14 @@ silence and refined perception.
 
           <div className="mt-20">
   <img
-    src="/Images/sun-hand.jpg"
+    src="/images/sun-hand.jpg"
     alt="Mediterranean jewelry"
     className="rounded-3xl h-[280px] w-full object-cover brightness-110 saturate-72 contrast-84 hue-rotate-[-6deg]transition duration-700 ease-out hover:scale-[1.015]"
   />
 </div>
 
           <img
-            src="/Images/rings-hand.jpg"
+            src="/images/rings-hand.jpg"
             alt="Silver rings"
             className="rounded-3xl h-[560px] w-full object-cover brightness-103 saturate-95 contrast-85 sepia-[0.015] sepia-[0.02]transition duration-700 ease-out hover:scale-[1.015]"
           />
