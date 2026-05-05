@@ -14,7 +14,7 @@ export default function ScheherezadeLifeLanding() {
 
         <div className="relative z-10 text-center px-6 max-w-3xl mt-6 md:mt-12">
          <img
-  src="/Images/logo transparente.png"
+  src="/images/logo transparente.png"
   alt="Scheherezade Life"
  className="mx-auto w-[320px] md:w-[850px] max-w-full contrast-200 brightness-50"
 />
