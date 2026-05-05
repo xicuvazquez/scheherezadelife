@@ -20,10 +20,7 @@ export const metadata: Metadata = {
   title: "Scheherezade Life",
   description:
     "Mediterranean atmosphere, quiet luxury and timeless silver objects.",
-  icons: {
-    icon: "/favicon.ico",
-  },
-  };
+};
 export default function RootLayout({
   children,
 }: Readonly<{
