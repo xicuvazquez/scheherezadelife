@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   description:
     "Mediterranean atmosphere, quiet luxury and timeless silver objects.",
   icons: {
-    icon: "/favicon.png",
+    icon: "/favicon.ico",
   },
   };
 export default function RootLayout({
