@@ -18,8 +18,18 @@ const geistMono = Geist_Mono({
 });
 export const metadata: Metadata = {
   title: "Scheherezade Life",
+
   description:
     "Mediterranean atmosphere, quiet luxury and timeless silver objects.",
+
+  openGraph: {
+    title: "Scheherezade Life",
+
+    description:
+      "Mediterranean atmosphere, quiet luxury and timeless silver objects.",
+
+    images: ["/images/hero.jpg"],
+  },
 };
 export default function RootLayout({
   children,
