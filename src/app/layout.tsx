@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     description:
       "Mediterranean atmosphere, quiet luxury and timeless silver objects.",
 
-    images: ["/images/hero.jpg"],
+    images: ["/images/og-image.png"],
   },
 };
 export default function RootLayout({
