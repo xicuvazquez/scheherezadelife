@@ -12,11 +12,11 @@ export default function ScheherezadeLifeLanding() {
 
         <div className="absolute inset-0 bg-[#f5e9d8]/30" />
 
-        <div className="relative z-10 text-center px-6 max-w-3xl mt-6 md:mt-12">
+        <div className="relative z-10 text-center px-6 max-w-3xl mt-16 md:mt-12">
          <img
   src="/images/logo-transparente.png"
   alt="Scheherezade Life"
- className="mx-auto w-[320px] md:w-[850px] max-w-full contrast-200 brightness-50"
+ className="mx-auto w-[420px] md:w-[850px] max-w-full contrast-200 brightness-50"
 />
 
         
