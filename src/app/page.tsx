@@ -3,7 +3,7 @@ export default function ScheherezadeLifeLanding() {
     <main className="min-h-screen bg-[#f5f1ea] text-[#2b2b2b] font-serif">
       
       {/* HERO */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative h-screen flex items-center justify-center overflow-hidden animation: fadeIn 8s ease-out forwards;">
         <img
           src="/images/hero.jpg"
           alt="Mediterranean atmosphere"
