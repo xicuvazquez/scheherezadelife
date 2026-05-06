@@ -3,7 +3,7 @@ export default function ScheherezadeLifeLanding() {
     <main className="min-h-screen bg-[#f5f1ea] text-[#2b2b2b] font-serif">
       
       {/* HERO */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden animation: fadeIn 8s ease-out forwards;">
+      <section className="relative h-screen flex items-center justify-center overflow-hidden animation: fadeIn 3s ease-out forwards;">
         <img
           src="/images/hero.jpg"
           alt="Mediterranean atmosphere"
@@ -104,9 +104,29 @@ silence and refined perception.
       </section>
 
       {/* FOOTER */}
-      <footer className="py-10 text-center text-sm text-neutral-500 border-t border-neutral-200">
-        © 2026 Scheherezade Life
-      </footer>
-    </main>
-  )
+      <footer className="px-6 py-24 text-center border-t border-[#d8d0c7] mt-32">
+  <div className="max-w-2xl mx-auto space-y-6">
+    
+    <h2 className="text-2xl tracking-[0.3em] text-[#2f2a26]">
+      SCHEHEREZADE LIFE
+    </h2>
+
+    <p className="text-[#6e665f] tracking-wide leading-loose">
+      Mediterranean silver objects and quiet visual storytelling.
+    </p>
+
+    <div className="flex items-center justify-center gap-6 text-sm tracking-[0.2em] uppercase text-[#8a8178]">
+      <a href="#">Instagram</a>
+      <a href="#">Contact</a>
+    </div>
+
+    <p className="text-sm text-[#a59b90] pt-6">
+      © 2026 Scheherezade Life
+    </p>
+
+  </div>
+</footer>
+</main>
+
+)
 }
