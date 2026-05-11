@@ -32,10 +32,18 @@ export default function Navbar() {
 
           <div
             className={`
-              rounded-full px-6 py-4 flex items-center justify-between transition-all duration-700
-              ${scrolled
-                ? "bg-black/40 backdrop-blur-xl border border-white/10"
-: "bg-black/25 backdrop-blur-xl border border-white/10"}
+              rounded-full
+              px-6
+              py-4
+              flex
+              items-center
+              justify-between
+              transition-all
+              duration-700
+              backdrop-blur-xl
+              border
+              border-white/10
+              bg-black/30
             `}
           >
 
@@ -46,9 +54,8 @@ export default function Navbar() {
             >
               Scheherezade Life
             </Link>
-
-            {{/* DESKTOP NAV */}
-<div className="hidden md:flex items-center gap-6 lg:gap-8 uppercase tracking-[0.25em] text-[10px] md:text-xs text-white">
+{/* DESKTOP NAV */}
+<div className="hidden md:flex items-center gap-8 uppercase tracking-[0.22em] text-xs text-white">
 
   <Link
     href="/about"
@@ -87,18 +94,24 @@ export default function Navbar() {
 
 </div>
 
-            {/* MOBILE NAV */}
-            <div className="flex md:hidden items-center">
+{/* MOBILE NAV */}
+<div className="flex md:hidden items-center gap-5 text-white">
 
-              <button
-                onClick={() => setCartOpen(true)}
-                className="hover:opacity-50 transition duration-500"
-              >
-                <ShoppingBag size={20} strokeWidth={1.5} />
-              </button>
+  <Link
+    href="/shop"
+    className="uppercase tracking-[0.18em] text-[10px]"
+  >
+    Shop
+  </Link>
 
-            </div>
+  <button
+    onClick={() => setCartOpen(true)}
+    className="hover:opacity-50 transition duration-500"
+  >
+    <ShoppingBag size={18} strokeWidth={1.5} />
+  </button>
 
+</div>
           </div>
 
         </div>
