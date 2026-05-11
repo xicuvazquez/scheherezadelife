@@ -2,7 +2,10 @@
 
 import Link from "next/link"
 import { useEffect, useState } from "react"
+import { ShoppingBag } from "lucide-react";
+import Cart from "@/components/Cart";
 export default function Navbar() {
+  const [cartOpen, setCartOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false)
 
 useEffect(() => {
@@ -58,8 +61,22 @@ useEffect(() => {
 >
   Journal
 </Link>
-
-
+<Link
+  href="/shop"
+  className="hover:opacity-50 transition duration-500"
+>
+  Shop
+</Link>
+<button
+  onClick={() => setCartOpen(true)}
+  className="hover:opacity-50 transition duration-500"
+>
+  <ShoppingBag size={18} strokeWidth={1.5} />
+</button>
+<Cart
+  isOpen={cartOpen}
+  onClose={() => setCartOpen(false)}
+/>
           </nav>
 
         </div>
