@@ -17,21 +17,37 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
-export const metadata: Metadata = {
+export const metadata = {
   title: "Scheherezade Life",
-
   description:
-    "Mediterranean atmosphere, quiet luxury and timeless silver objects.",
+    "Curated silver objects, textures and Mediterranean atmospheres.",
 
   openGraph: {
     title: "Scheherezade Life",
-
     description:
-      "Mediterranean atmosphere, quiet luxury and timeless silver objects.",
-
-    images: ["/images/og-image.png"],
+      "Curated silver objects, textures and Mediterranean atmospheres.",
+    url: "https://scheherezadelife.com",
+    siteName: "Scheherezade Life",
+    images: [
+      {
+        url: "/images/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Scheherezade Life",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
   },
-};
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Scheherezade Life",
+    description:
+      "Curated silver objects, textures and Mediterranean atmospheres.",
+    images: ["/images/og-image.jpg"],
+  },
+}
 export default function RootLayout({
   children,
 }: Readonly<{
