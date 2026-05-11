@@ -39,50 +39,54 @@ useEffect(() => {
             Scheherezade Life
           </Link>
 
-          {/* LINKS */}
-          <nav className="flex items-center gap-6 md:gap-8 uppercase tracking-[0.25em] text-[10px] md:text-xs">
+          {/* DESKTOP NAV */}
+<nav className="hidden md:flex items-center gap-6 lg:gap-8 uppercase tracking-[0.25em] text-[10px] md:text-xs">
 
-           <Link
-  href="/about"
-  className="hover:opacity-50 transition duration-500"
->
-  About
-</Link>
-
-<Link
-  href="/gallery"
-  className="hover:opacity-50 transition duration-500"
->
-  Gallery
+  <Link
+    href="/about"
+    className="hover:opacity-50 transition duration-500"
+  >
+    About
   </Link>
-<Link
-  href="/journal"
-  className="hover:opacity-50 transition duration-500"
->
-  Journal
-</Link>
-<Link
-  href="/shop"
-  className="hover:opacity-50 transition duration-500"
->
-  Shop
-</Link>
-<button
-  onClick={() => setCartOpen(true)}
-  className="hover:opacity-50 transition duration-500"
->
-  <ShoppingBag size={18} strokeWidth={1.5} />
-</button>
-<Cart
-  isOpen={cartOpen}
-  onClose={() => setCartOpen(false)}
-/>
-          </nav>
 
-        </div>
+  <Link
+    href="/gallery"
+    className="hover:opacity-50 transition duration-500"
+  >
+    Gallery
+  </Link>
 
-      </div>
+  <Link
+    href="/journal"
+    className="hover:opacity-50 transition duration-500"
+  >
+    Journal
+  </Link>
 
-    </header>
-  )
-}
+  <Link
+    href="/shop"
+    className="hover:opacity-50 transition duration-500"
+  >
+    Shop
+  </Link>
+
+  <button
+    onClick={() => setCartOpen(true)}
+    className="hover:opacity-50 transition duration-500"
+  >
+    <ShoppingBag size={18} strokeWidth={1.5} />
+  </button>
+
+</nav>
+
+{/* MOBILE NAV */}
+<div className="flex md:hidden items-center">
+
+  <button
+    onClick={() => setCartOpen(true)}
+    className="hover:opacity-50 transition duration-500"
+  >
+    <ShoppingBag size={20} strokeWidth={1.5} />
+  </button>
+
+</div>
