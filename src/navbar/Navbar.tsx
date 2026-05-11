@@ -22,11 +22,9 @@ useEffect(() => {
        <div
   className={`
     rounded-full px-6 py-4 flex items-center justify-between transition-all duration-700
-    ${
-      scrolled
-        ? "bg-white/70 backdrop-blur-xl shadow-sm border border-white/30"
-        : "bg-white/10 backdrop-blur-md border border-white/10"
-    }
+  ${scrolled
+  ? "bg-white/70 backdrop-blur-xl shadow-sm border border-white/30"
+  : "bg-[#f5f1eb]/80 backdrop-blur-xl border border-black/5"}
   `}
 >
 
@@ -53,6 +51,12 @@ useEffect(() => {
   className="hover:opacity-50 transition duration-500"
 >
   Gallery
+  </Link>
+<Link
+  href="/journal"
+  className="hover:opacity-50 transition duration-500"
+>
+  Journal
 </Link>
 
 

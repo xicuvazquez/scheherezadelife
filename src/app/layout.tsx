@@ -53,7 +53,7 @@ export default function RootLayout({
 
     <div>
 
-      <p className="uppercase tracking-[0.3em] text-xs text-[#777] mb-6">
+      <p className="tracking-[0.18em] text-xs text-[#777] mb-6">
         Scheherezade Life
       </p>
 
@@ -63,24 +63,28 @@ export default function RootLayout({
 
     </div>
 
-    <div className="flex flex-col gap-4 uppercase tracking-[0.25em] text-xs">
+    <div className="flex flex-col gap-5 text-sm tracking-[0.08em] break-all">
 
       <a
         href="https://instagram.com/scheherezadelife"
         target="_blank"
         rel="noopener noreferrer"
+        style={{ textTransform: "lowercase" }}
         className="hover:opacity-50 transition duration-500"
       >
-        Instagram
+        instagram
       </a>
 
-      <a
-        href="mailto:hello@scheherezadelife.com"
-        className="hover:opacity-50 transition duration-500"
-      >
-        hello@scheherezadelife.com
-      </a>
-
+     <a
+  href="https://mail.google.com/mail/?view=cm&fs=1&to=hello@scheherezadelife.com"
+  target="_blank"
+  rel="noopener noreferrer"
+  style={{ textTransform: "lowercase" }}
+  className="block w-fit hover:opacity-50 transition duration-500"
+>
+  hello@scheherezadelife.com
+</a>
+ 
     </div>
 
   </div>

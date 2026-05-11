@@ -12,7 +12,7 @@ const imageY = useTransform(scrollY, [0, 1000], [0, -80])
   animate={{ opacity: 1 }}
   exit={{ opacity: 0 }}
   transition={{ duration: 0.6 }}
-  className="min-h-screen bg-[#F5F1EB] text-[#111111]"
+  className="py-32 md:py-40 bg-[#F5F1EB] text-[#111111]"
 >
 
       {/* HERO */}
@@ -81,9 +81,9 @@ const imageY = useTransform(scrollY, [0, 1000], [0, -80])
     </div>
 
     {/* TEXT */}
-    <div className="max-w-xl">
+    <div className="max-w-3xl mx-auto">
 
-      <p className="uppercase tracking-[0.3em] text-xs text-[#777] mb-6">
+      <p className="tracking-[0.12em] text-xs text-[#777] mb-6">
         Philosophy
       </p>
 
@@ -103,7 +103,7 @@ const imageY = useTransform(scrollY, [0, 1000], [0, -80])
 </motion.section>
       {/* MANIFESTO */}
       <section className="px-6 md:px-12 py-24">
-        <div className="max-w-2xl">
+        <div className="max-w-4xl mx-auto">
           <p className="text-lg sm:text-xl md:text-3xl leading-relaxed text-[#4d4d4d] font-light">
             We believe luxury is no longer loud.
             It lives in atmosphere, texture, emotion

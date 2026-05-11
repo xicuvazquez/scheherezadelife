@@ -14,7 +14,7 @@ export default function ScheherezadeLifeLanding() {
 
         <div className="relative z-10 text-center px-6 max-w-3xl mt-16 md:mt-12">
          <img
-  src="/images/logo-transparente.png"
+  src="/images/logo-transparent.png"
   alt="Scheherezade Life"
  className="mx-auto w-[420px] md:w-[850px] max-w-full contrast-200 brightness-50"
 />
@@ -66,14 +66,14 @@ silence and refined perception.
   <img
     src="/images/sun-hand.jpg"
     alt="Mediterranean jewelry"
-    className="rounded-3xl h-[280px] w-full object-cover brightness-110 saturate-72 contrast-84 hue-rotate-[-6deg]transition duration-700 ease-out hover:scale-[1.015]"
+    className="rounded-3xl h-[420px] md:h-[520px] w-full object-cover brightness-110 saturate-72 contrast-84 hue-rotate-[-6deg]transition duration-700 ease-out hover:scale-[1.015]"
   />
 </div>
 
           <img
             src="/images/rings-hand.jpg"
             alt="Silver rings"
-            className="rounded-3xl h-[560px] w-full object-cover brightness-103 saturate-95 contrast-85 sepia-[0.015] sepia-[0.02]transition duration-700 ease-out hover:scale-[1.015]"
+            className="rounded-3xl h-[520px] md:h-[760px] w-full object-cover brightness-105 contrast-95 transition-transform duration-1000 ease-out hover:scale-[1.015]"
           />
         </div>
       </section>

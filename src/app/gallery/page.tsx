@@ -44,7 +44,7 @@ export default function GalleryPage() {
     <img
       src="/images/gallery/gallery-1.jpg"
       alt=""
-      className="w-full h-[700px] object-cover transition-transform duration-[4000ms] group-hover:scale-[1.03]"
+      className="w-full h-[700px] object-cover transition-transform duration-[4000ms] group-hover:scale-[1.03]brightness-[1.02] contrast-[0.92] saturate-[0.82]"
     />
 
     <div className="absolute inset-0 bg-black/10"></div>
@@ -62,7 +62,7 @@ export default function GalleryPage() {
       <img
         src="/images/gallery/gallery-2.jpg"
         alt=""
-        className="w-full h-[340px] object-cover transition-transform duration-[4000ms] group-hover:scale-[1.03]"
+        className="w-full h-[340px] object-cover transition-transform duration-[4000ms] group-hover:scale-[1.03brightness-[1.02] contrast-[0.92] saturate-[0.82]"
       />
 
       <div className="absolute inset-0 bg-black/10"></div>
@@ -78,7 +78,7 @@ export default function GalleryPage() {
       <img
         src="/images/gallery/gallery-3.jpg"
         alt=""
-        className="w-full h-[340px] object-cover transition-transform duration-[4000ms] group-hover:scale-[1.03]"
+        className="w-full h-[340px] object-cover transition-transform duration-[4000ms] group-hover:scale-[1.03brightness-[1.02] contrast-[0.92] saturate-[0.72]"
       />
 
       <div className="absolute inset-0 bg-black/10"></div>
