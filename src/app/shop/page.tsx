@@ -5,15 +5,25 @@ import { motion } from "framer-motion";
 
 const products = [
   {
-    name: "Molten silver earrings",
-    price: "€40",
-    image: "/images/products/product-1.jpg",
+    name: "Handcrafted silver bracelet with layered textures and organically aged Mediterranean details.",
+    price: "€45",
+    image: "/images/products/product-1.png",
   },
   {
-    name: "Molten silver ring",
+    name: "Sculptural sterling silver earrings with fluid organic curves and a refined artisanal character.",
     price: "€35",
-    image: "/images/products/product-2.jpg",
-  },
+    image: "/images/products/product-2.png",
+},
+{
+  name: "Delicate sterling silver necklace inspired by sea reflections and Mediterranean light.",
+  price: "€40",
+  image: "/images/products/product-3.png",
+},
+{
+  name: "Textured sterling silver cuff inspired by raw coastal surfaces and Mediterranean minimalism.",
+  price: "€48",
+  image: "/images/products/product-4.png",
+},
 ];
 
 export default function ShopPage() {

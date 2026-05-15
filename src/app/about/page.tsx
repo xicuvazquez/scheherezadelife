@@ -48,7 +48,7 @@ const imageY = useTransform(scrollY, [0, 1000], [0, -80])
   className="group relative overflow-hidden rounded-[30px]"
 >
     <img
-      src="/images/about/about-hero.jpg"
+      src="/images/about/about-new-hero.png"
       alt="Mediterranean atmosphere"
       className="w-full h-[60vh] object-cover transition-transform duration-[4000ms] group-hover:scale-[1.03]"
     />

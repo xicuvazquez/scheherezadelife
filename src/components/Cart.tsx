@@ -11,15 +11,26 @@ interface CartProps {
 
 const cartItems = [
   {
-    name: "Molten silver ring",
-    price: "€85",
-    image: "/images/products/product-1.jpg",
+    name: "Stone Bracelet",
+    price: "€45",
+    image: "/images/products/product-1.png",
   },
   {
-    name: "Molten silver earrings",
-    price: "€120",
-    image: "/images/products/product-2.jpg",
+    name: "Tide Hoops",
+    price: "€40",
+    image: "/images/products/product-2.png",
   },
+  {
+  name: "Sea Reflection Necklace",
+  price: "€50",
+  image: "/images/products/product-3.png",
+},
+
+{
+  name: "Coastal Silver Cuff",
+  price: "€48",
+  image: "/images/products/product-4.png",
+},
 ];
 
 export default function Cart({ isOpen, onClose }: CartProps) {

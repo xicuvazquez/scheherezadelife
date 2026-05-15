@@ -7,17 +7,17 @@ const entries = [
   {
     title: "Found by the water",
     date: "May 2026",
-   image: "/images/journal/journal-1.jpg",
+   image: "/images/journal/journal-1.png",
   },
   {
     title: "Silver under warm light",
     date: "May 2026",
-    image: "/images/journal/journal-2.jpg",
+    image: "/images/journal/journal-2.png",
   },
   {
     title: "Found objects",
     date: "May 2026",
-    image: "/images/journal/journal-3.jpg",
+    image: "/images/journal/journal-3.png",
   },
 ];
 
