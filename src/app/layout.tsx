@@ -69,7 +69,7 @@ export default function RootLayout({
 
     <div>
 
-      <p className="tracking-[0.18em] text-xs text-[#777] mb-6">
+      <p className="text-[18px] tracking-[0.22em] uppercase text-[#2b2b2b]">
         Scheherezade Life
       </p>
 
@@ -79,7 +79,7 @@ export default function RootLayout({
 
     </div>
 
-    <div className="flex flex-col gap-5 text-sm tracking-[0.08em] break-all">
+    <div className="flex flex-col gap-5 text-[18px] tracking-[0.18em]">
 
       <a
         href="https://instagram.com/scheherezadelife"

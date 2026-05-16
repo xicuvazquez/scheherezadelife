@@ -11,12 +11,12 @@ const products = [
   },
   {
     name: "Sculptural sterling silver earrings with fluid organic curves and a refined artisanal character.",
-    price: "€35",
+    price: "40€",
     image: "/images/products/product-2.png",
 },
 {
-  name: "Delicate sterling silver necklace inspired by sea reflections and Mediterranean light.",
-  price: "€40",
+  name: "Sea Reflection NecklaceDelicate sterling silver necklace inspired by sea reflections and Mediterranean light.",
+  price: "€50",
   image: "/images/products/product-3.png",
 },
 {

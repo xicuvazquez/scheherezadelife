@@ -28,13 +28,15 @@ export default function Navbar() {
 
       <header className="fixed top-0 left-0 w-full z-50">
 
-        <div className="px-4 pt-4 md:px-8">
+        <div className="px-3 pt-3 md:px-8">
 
           <div
             className={`
               rounded-full
-              px-6
-              py-4
+              px-5
+              py-3
+              md:px-6
+              md:py-4
               flex
               items-center
               justify-between
@@ -57,19 +59,6 @@ export default function Navbar() {
 {/* DESKTOP NAV */}
 <div className="hidden md:flex items-center gap-8 uppercase tracking-[0.22em] text-xs text-white">
 
-  <Link
-    href="/about"
-    className="hover:opacity-50 transition duration-500"
-  >
-    About
-  </Link>
-
-  <Link
-    href="/gallery"
-    className="hover:opacity-50 transition duration-500"
-  >
-    Gallery
-  </Link>
 
   <Link
     href="/journal"
@@ -106,9 +95,12 @@ export default function Navbar() {
 
   <button
     onClick={() => setCartOpen(true)}
-    className="hover:opacity-50 transition duration-500"
+   className="relative hover:opacity-50 transition duration-500"
   >
     <ShoppingBag size={18} strokeWidth={1.5} />
+    <span className="absolute -top-1 -right-1 text-[9px] tracking-[0.14em] text-[#8a8178]">
+  4
+</span>
   </button>
 
 </div>
