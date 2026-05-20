@@ -4,14 +4,31 @@ export default function ScheherezadeLifeLanding() {
       
       {/* HERO */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <img
-          src="/images/hero-webp.png"
-          alt="Mediterranean atmosphere"
-          className="absolute inset-0 w-full h-full object-cover"
-        />s
+      {/* DESKTOP HERO */}
 
+<img
+  src="/images/hero-webp.png"
+  alt="Mediterranean atmosphere"
+  className="absolute inset-0 w-full h-full object-cover hidden md:block"
+/>
+
+{/* MOBILE HERO */}
+
+<img
+  src="/images/hero-mobile.jpg"
+  alt="Mediterranean atmosphere"
+  className="absolute inset-0 w-full h-full object-cover block md:hidden"
+/>
+
+{/* MOBILE HERO */}
+
+<img
+  src="/images/hero-mobile.png"
+  alt="Mediterranean atmosphere"
+  className="block md:hidden absolute inset-0 w-full h-full object-cover"
+/>
        <div className="absolute inset-0 bg-black/10"></div>
-        <div className="relative z-10 text-center px-6 max-w-3xl mt-16 md:mt-20">
+        <div className="relative z-10 text-center px-6 max-w-3xl mt-10 md:mt-20">
          <img
   src="/images/logo-transparent.png"
   alt="Scheherezade Life"
