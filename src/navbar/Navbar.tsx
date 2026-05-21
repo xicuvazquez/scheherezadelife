@@ -61,18 +61,25 @@ export default function Navbar() {
 
 
   <Link
-    href="/journal"
-    className="hover:opacity-50 transition duration-500"
-  >
-    Journal
-  </Link>
+  href="/journal"
+  className="tracking-[0.28em] uppercase text-[11px] text-white"
+>
+  Journal
+</Link>
 
-  <Link
-    href="/shop"
-    className="hover:opacity-50 transition duration-500"
-  >
-    Shop
-  </Link>
+<Link
+  href="/about"
+  className="tracking-[0.28em] uppercase text-[11px] text-white"
+>
+  About
+</Link>
+
+<Link
+  href="/shop"
+  className="tracking-[0.28em] uppercase text-[11px] text-white"
+>
+  Shop
+</Link>
 
   <button
     onClick={() => setCartOpen(true)}

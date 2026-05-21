@@ -5,6 +5,7 @@ import Link from "next/link";
 const rings = [
   {
     id: 1,
+    slug: "cara-ring",
     name: "Cara Ring",
     price: "39€",
     editorial: "/images/products/cararing-editorial.png",
@@ -13,6 +14,7 @@ const rings = [
 
   {
     id: 2,
+    slug: "fortuna-ring",
     name: "Fortuna Ring",
     price: "69€",
     editorial: "/images/products/fortuna-editorial.png",
@@ -21,6 +23,7 @@ const rings = [
 
   {
     id: 3,
+    slug: "mamba-ring",
     name: "Mamba Ring",
     price: "89€",
     editorial: "/images/products/mamba-editorial.png",
@@ -126,7 +129,7 @@ export default function RingsPage() {
           {rings.map((product) => (
 
             <Link
-  href="/shop/rings/mamba-ring"
+  href={`/shop/rings/${product.slug}`}
   key={product.id}
   className="group cursor-pointer block"
 >

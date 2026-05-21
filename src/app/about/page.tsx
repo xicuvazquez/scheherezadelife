@@ -1,124 +1,151 @@
-"use client"
-
-import { motion, useScroll, useTransform } from "framer-motion"
+import Link from "next/link";
 
 export default function AboutPage() {
-  const { scrollY } = useScroll()
 
-const imageY = useTransform(scrollY, [0, 1000], [0, -80])
   return (
-   <motion.main
-  initial={{ opacity: 0 }}
-  animate={{ opacity: 1 }}
-  exit={{ opacity: 0 }}
-  transition={{ duration: 0.6 }}
-  className="py-32 md:py-40 bg-[#F5F1EB] text-[#111111]"
->
 
-      {/* HERO */}
-     <motion.section
-  initial={{ opacity: 0, y: 40 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 1.4 }}
-  className="min-h-[85vh] flex items-end px-6 md:px-12 pb-20"
->
-        <div>
-          <p className="uppercase tracking-[0.3em] text-sm mb-6">
-            Scheherezade Life
-          </p>
+    <main className="bg-[#f5f1eb] min-h-screen p-4 text-[#1d1d1d]">
 
-          <h1 className="text-4xl sm:text-5xl md:text-7xl leading-none max-w-4xl">
-            A Mediterranean vision
-            of timeless aesthetics.
-          </h1>
-        </div>
-      </motion.section>
+      {/* CARD */}
 
-      {/* IMAGE */}
-     {/* IMAGE */}
-<motion.section
-  initial={{ opacity: 0, y: 80 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  viewport={{ once: true }}
-  transition={{ duration: 1.2 }}
-  className="px-6 md:px-12 pb-32"
->
-<motion.div
-  style={{ y: imageY }}
-  className="group relative overflow-hidden rounded-[30px]"
->
-    <img
-      src="/images/about/about-new-hero.png"
-      alt="Mediterranean atmosphere"
-      className="w-full h-[60vh] object-cover transition-transform duration-[4000ms] group-hover:scale-[1.03]"
-    />
+      <div className="max-w-[1450px] mx-auto bg-[#ece7e1] rounded-[2.8rem] overflow-hidden border border-black/5">
 
-    <div className="absolute inset-0 bg-black/10"></div>
- </motion.div>
+        {/* NAVBAR */}
 
-  <p className="text-xs uppercase tracking-[0.3em] text-[#777] mt-6">
-    Mediterranean silence / Editorial textures
-  </p>
-</motion.section>
-<motion.section
-  initial={{ opacity: 0, y: 60 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  viewport={{ once: true }}
-  transition={{ duration: 1 }}
-  className="px-6 md:px-12 py-32"
->
-  <div className="grid md:grid-cols-2 gap-16 items-center">
+        <header className="px-10 py-7 flex items-center justify-between text-[10px] uppercase tracking-[0.28em]">
 
-    {/* IMAGE */}
-    <div className="group relative overflow-hidden rounded-[30px]">
-      <img
-        src="/images/about/about-detail.jpg"
-        alt="Editorial detail"
-        className="w-full h-[700px] object-cover transition-transform duration-[4000ms] group-hover:scale-[1.03]"
-      />
+          <Link
+            href="/"
+            className="opacity-70"
+          >
+            SCHEHEREZADE LIFE
+          </Link>
 
-      <div className="absolute inset-0 bg-black/10"></div>
-    </div>
+          <div className="flex items-center gap-8">
 
-    {/* TEXT */}
-    <div className="max-w-3xl mx-auto">
+            <Link
+              href="/journal"
+              className="opacity-55 hover:opacity-100 transition"
+            >
+              Journal
+            </Link>
 
-      <p className="tracking-[0.12em] text-xs text-[#777] mb-6">
-        Philosophy
-      </p>
+            <Link
+              href="/about"
+              className="opacity-100"
+            >
+              About
+            </Link>
 
-      <h2 className="text-4xl md:text-6xl leading-tight mb-8">
-        Atmosphere before perfection.
-      </h2>
+            <Link
+              href="/shop"
+              className="opacity-55 hover:opacity-100 transition"
+            >
+              Shop
+            </Link>
 
-      <p className="text-lg leading-relaxed text-[#555]">
-        Scheherezade Life explores a quieter vision of luxury —
-        one shaped by Mediterranean light, editorial storytelling
-        and timeless digital aesthetics.
-      </p>
+          </div>
 
-    </div>
+        </header>
 
-  </div>
-</motion.section>
-      {/* MANIFESTO */}
-      <section className="px-6 md:px-12 py-24">
-        <div className="max-w-4xl mx-auto">
-          <p className="text-lg sm:text-xl md:text-3xl leading-relaxed text-[#4d4d4d] font-light">
-            We believe luxury is no longer loud.
-            It lives in atmosphere, texture, emotion
-            and timeless visual storytelling.
-          </p>
-        </div>
-      </section>
 
-      {/* QUOTE */}
-      <section className="py-40 text-center">
-        <h2 className="text-3xl sm:text-5xl md:text-7xl italic font-light px-6">
-          “Luxury begins where noise disappears.”
-        </h2>
-      </section>
 
-    </motion.main>
-  )
+        {/* HERO */}
+
+        <section className="px-14 pt-10 pb-8">
+
+          <div className="max-w-[1180px] mx-auto flex items-center justify-center gap-16">
+
+            {/* LEFT */}
+
+            <div className="w-[26%]">
+
+              <p className="uppercase tracking-[0.28em] text-[10px] opacity-35 mb-6">
+
+                About
+
+              </p>
+
+              <h1
+                className="text-[2.85rem] leading-[1.12] tracking-[-0.06em]"
+                style={{ fontFamily: "Cormorant Garamond, serif" }}
+              >
+                Objetos de plata seleccionados por atmósfera y presencia.
+              </h1>
+
+            </div>
+
+
+
+            {/* RIGHT */}
+
+            <div className="w-[98%]">
+
+              <img
+                src="/images/about/about-hero.png"
+                alt="Scheherezade Life"
+                className="w-full h-[360px] object-cover rounded-[1.7rem]"
+              />
+
+            </div>
+
+          </div>
+
+        </section>
+
+
+
+        {/* LOWER */}
+
+        <section className="border-t border-black/6 px-14 py-7">
+
+          <div className="max-w-[1180px] mx-auto flex gap-16">
+
+            {/* LEFT ICON */}
+
+            <div className="w-[22%] flex items-start">
+
+              <div className="w-10 h-10 rounded-full border border-black/10 flex items-center justify-center text-sm opacity-35">
+
+                ↓
+
+              </div>
+
+            </div>
+
+
+
+            {/* RIGHT TEXT */}
+
+            <div className="w-[50%] max-w-[780px] space-y-3">
+
+              <p className="text-[1.12rem] leading-[2.1] opacity-222">
+
+                Scheherezade Life explora una estética construida alrededor de la plata, la textura, la arquitectura mediterránea y los objetos con presencia escultórica.
+
+              </p>
+
+              <p className="text-[0.84rem] leading-[2.1] opacity-60">
+
+                Cada pieza es seleccionada por coherencia visual, materialidad y permanencia, buscando crear una identidad silenciosa y editorial más allá de las tendencias rápidas.
+
+              </p>
+
+              <p className="text-[0.84rem] leading-[2.1] opacity-60">
+
+                La marca funciona como un universo visual donde joyería, fotografía, atmósfera y percepción forman parte del mismo lenguaje.
+
+              </p>
+
+            </div>
+
+          </div>
+
+        </section>
+
+      </div>
+
+    </main>
+
+  );
 }

@@ -5,6 +5,7 @@ import Link from "next/link";
 const earrings = [
   {
     id: 1,
+    slug: "abstra-earrings",
     name: "Abstra Earrings",
     price: "49€",
     editorial: "/images/products/abstra-editorial.png",
@@ -13,6 +14,7 @@ const earrings = [
 
   {
     id: 2,
+    slug: "lovehoops",
     name: "Lovehoops",
     price: "59€",
     editorial: "/images/products/lovehoops-editorial.png",
@@ -117,10 +119,11 @@ export default function EarringsPage() {
 
           {earrings.map((product) => (
 
-            <div
-              key={product.id}
-              className="group cursor-pointer"
-            >
+           <Link
+  href={`/shop/earrings/${product.slug}`}
+  key={product.id}
+  className="group cursor-pointer block"
+>
 
               <div className="relative overflow-hidden rounded-[2.2rem] bg-[#ebe7e2] aspect-[3/4]">
 
@@ -152,7 +155,7 @@ export default function EarringsPage() {
 
               </div>
 
-            </div>
+            </Link>
 
           ))}
 

@@ -3,26 +3,25 @@
 import Link from "next/link";
 import { useState } from "react";
 import RelatedProducts from "@/components/RelatedProducts";
-
 const product = {
-  name: "Mamba Ring",
+  name: "Moonface Pendant",
 
-  price: "89€",
+  price: "79€",
 
   description:
-    "A sculptural silver object selected for its bold silhouette and quiet presence.",
+    "A sculptural silver object selected for its quiet symbolism and textured presence.",
 
   materials: [
     "Sterling Silver 925",
     "Hand polished finish",
   ],
 
-  editorial: "/images/products/mamba-editorial.png",
+  editorial: "/images/products/colgante-moonface-editorial.png",
 
-  worn: "/images/products/mamba-worn.png",
+  worn: "/images/products/colgante-moonface-worn.png",
 };
 
-export default function MambaRingPage() {
+export default function MoonfacePendantPage() {
 
   const [activeImage, setActiveImage] = useState(product.editorial);
 
@@ -87,14 +86,14 @@ export default function MambaRingPage() {
 
           <span>/</span>
 
-          <Link href="/shop/rings">
-            Anillos
+          <Link href="/shop/pendants">
+            Colgantes
           </Link>
 
           <span>/</span>
 
           <span className="opacity-80">
-            Mamba Ring
+            Moonface Pendant
           </span>
 
         </div>
@@ -217,9 +216,9 @@ export default function MambaRingPage() {
 
       </section>
 
-      <RelatedProducts
-  category="rings"
-  currentProduct="mamba-ring"
+<RelatedProducts
+  category="pendants"
+  currentProduct="moonface-pendant"
 />
 
     </main>

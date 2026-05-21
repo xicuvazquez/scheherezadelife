@@ -3,34 +3,31 @@
 import Link from "next/link";
 import { useState } from "react";
 import RelatedProducts from "@/components/RelatedProducts";
-
 const product = {
-  name: "Mamba Ring",
+  name: "Lovehoops",
 
-  price: "89€",
+  price: "59€",
 
   description:
-    "A sculptural silver object selected for its bold silhouette and quiet presence.",
+    "Selected silver objects shaped through light, texture and sculptural simplicity.",
 
   materials: [
     "Sterling Silver 925",
     "Hand polished finish",
   ],
 
-  editorial: "/images/products/mamba-editorial.png",
+  editorial: "/images/products/lovehoops-editorial.png",
 
-  worn: "/images/products/mamba-worn.png",
+  worn: "/images/products/lovehoops-worn.png",
 };
 
-export default function MambaRingPage() {
+export default function LovehoopsPage() {
 
   const [activeImage, setActiveImage] = useState(product.editorial);
 
   return (
 
     <main className="bg-[#f5f1eb] min-h-screen text-black">
-
-      {/* NAVBAR */}
 
       <header className="sticky top-0 z-50 px-4 md:px-8 pt-4">
 
@@ -67,11 +64,7 @@ export default function MambaRingPage() {
 
 
 
-      {/* PRODUCT */}
-
       <section className="max-w-[1600px] mx-auto px-8 md:px-14 pt-14 pb-32">
-
-        {/* BREADCRUMB */}
 
         <div className="flex items-center gap-3 text-[11px] uppercase tracking-[0.22em] opacity-45 mb-10">
 
@@ -87,14 +80,14 @@ export default function MambaRingPage() {
 
           <span>/</span>
 
-          <Link href="/shop/rings">
-            Anillos
+          <Link href="/shop/earrings">
+            Pendientes
           </Link>
 
           <span>/</span>
 
           <span className="opacity-80">
-            Mamba Ring
+            Lovehoops
           </span>
 
         </div>
@@ -102,8 +95,6 @@ export default function MambaRingPage() {
 
 
         <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-16 items-start">
-
-          {/* LEFT */}
 
           <div>
 
@@ -118,8 +109,6 @@ export default function MambaRingPage() {
             </div>
 
 
-
-            {/* IMAGE SWITCHER */}
 
             <div className="flex gap-4 mt-5">
 
@@ -151,8 +140,6 @@ export default function MambaRingPage() {
 
 
 
-          {/* RIGHT */}
-
           <div className="lg:sticky lg:top-32">
 
             <p className="uppercase tracking-[0.32em] text-[11px] opacity-50 mb-5">
@@ -175,8 +162,6 @@ export default function MambaRingPage() {
             </div>
 
 
-
-            {/* MATERIALS */}
 
             <div className="border-t border-black/10 pt-8 mb-10">
 
@@ -203,8 +188,6 @@ export default function MambaRingPage() {
 
 
 
-            {/* BUTTON */}
-
             <button className="w-full bg-black text-white rounded-full py-5 uppercase tracking-[0.28em] text-[11px] hover:opacity-90 transition">
 
               Add to cart
@@ -217,11 +200,10 @@ export default function MambaRingPage() {
 
       </section>
 
-      <RelatedProducts
-  category="rings"
-  currentProduct="mamba-ring"
+<RelatedProducts
+  category="earrings"
+  currentProduct="lovehoops"
 />
-
     </main>
 
   );
