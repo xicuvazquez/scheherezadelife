@@ -72,7 +72,7 @@ export default function Cart({ isOpen, onClose }: CartProps) {
 
               <button
                 onClick={onClose}
-                className="text-sm tracking-[0.12em] uppercase text-[#8a8178] hover:text-black transition duration-500"
+                className="text-sm tracking-[0.12em] uppercase text-[#8a8178] hover:text-black transition duration-[1200ms]"
               >
                 <X size={22} strokeWidth={1.5} />
               </button>
@@ -89,7 +89,7 @@ export default function Cart({ isOpen, onClose }: CartProps) {
                   className="border-b border-black/10 pb-10"
                 >
 
-                 <div className="group relative overflow-hidden rounded-[1.5rem] mb-5">
+                 <div className="group relative overflow-hidden rounded-[2.2rem] mb-5">
 
                     <Image
                       src={item.image}
@@ -141,7 +141,7 @@ export default function Cart({ isOpen, onClose }: CartProps) {
               </div>
 
               <button
-  className="w-full py-5 rounded-full border border-black/10 bg-[#1a1a1a] text-[#f5f1eb] tracking-[0.18em] uppercase text-[11px] hover:bg-black transition-all duration-700"
+  className="w-full py-5 rounded-full border border-black/10 bg-[#1a1a1a] text-[#f5f1eb] tracking-[0.18em] uppercase text-[11px] hover:bg-black transition-all duration-[1600ms]"
 >
   Continue to Checkout
 </button>

@@ -1,5 +1,5 @@
 "use client";
-
+import Navbar from "@/components/Navbar";
 import Link from "next/link";
 import { useState } from "react";
 import RelatedProducts from "@/components/RelatedProducts";
@@ -98,7 +98,7 @@ export default function LovehoopsPage() {
 
           <div>
 
-            <div className="relative overflow-hidden rounded-[2.5rem] bg-[#ebe7e2]">
+            <div className="relative overflow-hidden rounded-[2.2rem] bg-[#ebe7e2]">
 
               <img
                 src={activeImage}
@@ -142,7 +142,7 @@ export default function LovehoopsPage() {
 
           <div className="lg:sticky lg:top-32">
 
-            <p className="uppercase tracking-[0.32em] text-[11px] opacity-50 mb-5">
+            <p className="uppercase tracking-[0.32em] text-[11px] opacity-70 mb-5">
               Scheherezade Selection
             </p>
 
@@ -204,6 +204,7 @@ export default function LovehoopsPage() {
   category="earrings"
   currentProduct="lovehoops"
 />
+
     </main>
 
   );

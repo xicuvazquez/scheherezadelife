@@ -2,7 +2,8 @@ import { AnimatePresence } from "framer-motion"
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/navbar/Navbar"
+import Navbar from "@/components/Navbar"
+import Footer from "@/components/Footer";
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
   weight: ["300", "400", "500"],
@@ -63,49 +64,7 @@ export default function RootLayout({
   <AnimatePresence mode="wait">
   {children}
 </AnimatePresence>
-<footer className="px-6 md:px-12 py-20 border-t border-black/10 bg-[#F5F1EB]">
-
-  <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-12">
-
-    <div>
-
-      <p className="text-[18px] tracking-[0.22em] uppercase text-[#2b2b2b]">
-        Scheherezade Life
-      </p>
-
-      <h2 className="text-3xl md:text-5xl leading-tight max-w-xl">
-        Mediterranean atmosphere and timeless visual storytelling.
-      </h2>
-
-    </div>
-
-    <div className="flex flex-col gap-5 text-[18px] tracking-[0.18em]">
-
-      <a
-        href="https://instagram.com/scheherezadelife"
-        target="_blank"
-        rel="noopener noreferrer"
-        style={{ textTransform: "lowercase" }}
-        className="hover:opacity-50 transition duration-500"
-      >
-        instagram
-      </a>
-
-     <a
-  href="https://mail.google.com/mail/?view=cm&fs=1&to=hello@scheherezadelife.com"
-  target="_blank"
-  rel="noopener noreferrer"
-  style={{ textTransform: "lowercase" }}
-  className="block w-fit hover:opacity-50 transition duration-500"
->
-  hello@scheherezadelife.com
-</a>
- 
-    </div>
-
-  </div>
-
-</footer>
+<Footer />
 </body>
   </html>
   );

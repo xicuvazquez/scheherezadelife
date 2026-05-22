@@ -1,73 +1,31 @@
-import Link from "next/link";
+import Navbar from "@/components/Navbar";
 
 export default function AboutPage() {
-
   return (
+    <main className="min-h-screen bg-[#f5f1eb] p-3 md:p-5 text-[#1d1d1d]">
 
-    <main className="bg-[#f5f1eb] min-h-screen p-4 text-[#1d1d1d]">
+   
 
-      {/* CARD */}
+      {/* MAIN CARD */}
 
-      <div className="max-w-[1450px] mx-auto bg-[#ece7e1] rounded-[2.8rem] overflow-hidden border border-black/5">
-
-        {/* NAVBAR */}
-
-        <header className="px-10 py-7 flex items-center justify-between text-[10px] uppercase tracking-[0.28em]">
-
-          <Link
-            href="/"
-            className="opacity-70"
-          >
-            SCHEHEREZADE LIFE
-          </Link>
-
-          <div className="flex items-center gap-8">
-
-            <Link
-              href="/journal"
-              className="opacity-55 hover:opacity-100 transition"
-            >
-              Journal
-            </Link>
-
-            <Link
-              href="/about"
-              className="opacity-100"
-            >
-              About
-            </Link>
-
-            <Link
-              href="/shop"
-              className="opacity-55 hover:opacity-100 transition"
-            >
-              Shop
-            </Link>
-
-          </div>
-
-        </header>
-
-
+      <div className="mx-auto max-w-[1500px] overflow-hidden rounded-[2.2rem] border border-black/5 bg-[#ece7e1] pt-24 md:pt-28">
 
         {/* HERO */}
 
-        <section className="px-14 pt-10 pb-8">
+        <section className="px-6 pt-8 pb-10 md:px-16 md:pt-10">
 
-          <div className="max-w-[1180px] mx-auto flex items-center justify-center gap-16">
+          <div className="mx-auto flex max-w-[1380px] flex-col gap-10 md:flex-row md:items-center md:justify-center md:gap-14">
 
-            {/* LEFT */}
+            {/* LEFT TEXT */}
 
-            <div className="w-[26%]">
+            <div className="w-full md:w-[18%]">
 
-              <p className="uppercase tracking-[0.28em] text-[10px] opacity-35 mb-6">
-
+              <p className="mb-5 text-[10px] uppercase tracking-[0.28em] opacity-35 md:mb-7">
                 About
-
               </p>
 
               <h1
-                className="text-[2.85rem] leading-[1.12] tracking-[-0.06em]"
+                className="max-w-[95%] text-[3.3rem] leading-[0.92] tracking-[-0.06em] md:max-w-none md:text-[2.7rem] md:leading-[1.08]"
                 style={{ fontFamily: "Cormorant Garamond, serif" }}
               >
                 Objetos de plata seleccionados por atmósfera y presencia.
@@ -75,16 +33,14 @@ export default function AboutPage() {
 
             </div>
 
+            {/* RIGHT IMAGE */}
 
-
-            {/* RIGHT */}
-
-            <div className="w-[98%]">
+            <div className="w-full md:w-[82%]">
 
               <img
                 src="/images/about/about-hero.png"
                 alt="Scheherezade Life"
-                className="w-full h-[360px] object-cover rounded-[1.7rem]"
+                className="h-[420px] w-full rounded-[2rem] object-cover md:h-[460px] md:rounded-[2.2rem]"
               />
 
             </div>
@@ -93,45 +49,39 @@ export default function AboutPage() {
 
         </section>
 
+        {/* LOWER SECTION */}
 
+        <section className="border-t border-black/5 px-6 py-10 md:px-16 md:py-8">
 
-        {/* LOWER */}
-
-        <section className="border-t border-black/6 px-14 py-7">
-
-          <div className="max-w-[1180px] mx-auto flex gap-16">
+          <div className="mx-auto flex max-w-[1380px] flex-col gap-10 md:flex-row md:gap-14">
 
             {/* LEFT ICON */}
 
-            <div className="w-[22%] flex items-start">
+            <div className="hidden w-[18%] items-start md:flex">
 
-              <div className="w-10 h-10 rounded-full border border-black/10 flex items-center justify-center text-sm opacity-35">
-
+              <div className="flex h-10 w-10 items-center justify-center rounded-full border border-black/10 text-sm opacity-35">
                 ↓
-
               </div>
 
             </div>
 
-
-
             {/* RIGHT TEXT */}
 
-            <div className="w-[50%] max-w-[780px] space-y-3">
+            <div className="w-full max-w-[820px] space-y-8 md:w-[82%]">
 
-              <p className="text-[1.12rem] leading-[2.1] opacity-222">
+              <p className="text-[1rem] leading-[2] opacity-72 md:text-[0.95rem] md:leading-[2.1]">
 
                 Scheherezade Life explora una estética construida alrededor de la plata, la textura, la arquitectura mediterránea y los objetos con presencia escultórica.
 
               </p>
 
-              <p className="text-[0.84rem] leading-[2.1] opacity-60">
+              <p className="text-[1rem] leading-[2] opacity-72 md:text-[0.95rem] md:leading-[2.1]">
 
                 Cada pieza es seleccionada por coherencia visual, materialidad y permanencia, buscando crear una identidad silenciosa y editorial más allá de las tendencias rápidas.
 
               </p>
 
-              <p className="text-[0.84rem] leading-[2.1] opacity-60">
+              <p className="text-[1rem] leading-[2] opacity-72 md:text-[0.95rem] md:leading-[2.1]">
 
                 La marca funciona como un universo visual donde joyería, fotografía, atmósfera y percepción forman parte del mismo lenguaje.
 
@@ -146,6 +96,5 @@ export default function AboutPage() {
       </div>
 
     </main>
-
   );
 }

@@ -1,260 +1,117 @@
-"use client";
-
 import Link from "next/link";
-import { motion } from "framer-motion";
-
-const products = [
-  {
-    id: 1,
-    name: "Abstra Earrings",
-    price: "49€",
-    category: "earrings",
-    images: [
-      "/images/products/abstra-editorial.png",
-      "/images/products/abstra-worn.png",
-    ],
-  },
-
-  {
-    id: 2,
-    name: "Cara Ring",
-    price: "39€",
-    category: "rings",
-    images: [
-      "/images/products/cararing-editorial.png",
-      "/images/products/cararing-worn.png",
-    ],
-  },
-
-  {
-    id: 3,
-    name: "Moonface Pendant",
-    price: "79€",
-    category: "pendants",
-    images: [
-      "/images/products/colgante-moonface-editorial.png",
-      "/images/products/colgante-moonface-worn.png",
-    ],
-  },
-
-  {
-    id: 4,
-    name: "Fortuna Ring",
-    price: "69€",
-    category: "selection",
-    images: [
-      "/images/products/fortuna-editorial.png",
-      "/images/products/fortuna-worn.png",
-    ],
-  },
-
-  {
-    id: 5,
-    name: "Lovehoops",
-    price: "59€",
-    category: "earrings",
-    images: [
-      "/images/products/lovehoops-editorial.png",
-      "/images/products/lovehoops-worn.png",
-    ],
-  },
-
-  {
-    id: 6,
-    name: "Mamba Ring",
-    price: "89€",
-    category: "selection",
-    images: [
-      "/images/products/mamba-editorial.png",
-      "/images/products/mamba-worn.png",
-    ],
-  },
-];
 
 export default function ShopPage() {
   return (
-    <main className="bg-[#f5f1eb] min-h-screen text-black">
+    <main className="bg-[#f5f1eb] px-4 pt-24 pb-16 text-[#1d1d1d] md:pt-28 md:pb-20">
 
-      {/* NAVBAR */}
+      <section className="mx-auto max-w-[1450px]">
 
-      <header className="sticky top-0 z-50 px-4 md:px-8 pt-4">
+        {/* HERO */}
 
-        <div className="backdrop-blur-md bg-[#a7a19c]/90 rounded-full px-8 py-5 flex items-center justify-between">
+        <div className="mb-14 md:mb-16">
 
-          <Link
-            href="/"
-            className="tracking-[0.35em] uppercase text-[11px] text-white"
+          <p className="mb-5 text-[10px] uppercase tracking-[0.28em] opacity-40 md:mb-6">
+            Shop
+          </p>
+
+          <h1
+            className="max-w-[95%] text-[3.6rem] leading-[0.9] tracking-[-0.06em] md:max-w-[900px] md:text-[5rem] md:leading-[0.92]"
+            style={{ fontFamily: "Cormorant Garamond, serif" }}
           >
-            SCHEHEREZADE LIFE
-          </Link>
-
-          <div className="flex items-center gap-10">
-
-            <Link
-              href="/journal"
-              className="tracking-[0.28em] uppercase text-[11px] text-white"
-            >
-              Journal
-            </Link>
-
-            <Link
-              href="/shop"
-              className="tracking-[0.28em] uppercase text-[11px] text-white"
-            >
-              Shop
-            </Link>
-
-            <div className="w-4 h-4 border border-white rounded-sm" />
-
-          </div>
+            Sterling silver objects shaped by atmosphere and presence.
+          </h1>
 
         </div>
 
-      </header>
+        {/* CATEGORIES */}
 
+        <div className="grid gap-8 md:grid-cols-3 md:gap-10">
 
-
-     {/* HERO */}
-
-<section className="px-8 md:px-14 pt-16 pb-14">
-
-  <motion.div
-    initial={{ opacity: 0, y: 18 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.8 }}
-    className="max-w-[780px]"
-  >
-
-    <p className="uppercase tracking-[0.32em] text-[11px] opacity-50 mb-5">
-      Editorial Silver Objects
-    </p>
-
-    <h1
-      className="text-[clamp(3.2rem,7vw,6.5rem)] leading-[0.95] tracking-[-0.06em]"
-      style={{ fontFamily: "Cormorant Garamond, serif" }}
-    >
-      Editorial Silver Objects.
-    </h1>
-
-  </motion.div>
-
-</section>
-
-
-
-      {/* CATEGORIES */}
-
-      <section className="max-w-[1600px] mx-auto px-8 md:px-14 pb-28">
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-
-          {/* PENDIENTES */}
-
-          <Link
-            href="/shop/earrings"
-            className="group cursor-pointer block"
-          >
-
-            <div className="relative overflow-hidden rounded-[2.2rem] aspect-[3/4]">
-
-              <img
-                src="/images/categories/earrings-category.png"
-                alt="Pendientes"
-                className="w-full h-full object-cover object-center transition duration-700 group-hover:scale-[1.03]"
-              />
-
-              <div className="absolute inset-0 bg-black/15" />
-
-              <div className="absolute bottom-8 left-8">
-
-                <p className="text-white/70 uppercase tracking-[0.25em] text-[11px] mb-3">
-                  Scheherezade Life
-                </p>
-
-                <h2
-                  className="text-white text-4xl tracking-[-0.05em]"
-                  style={{ fontFamily: "Cormorant Garamond, serif" }}
-                >
-                  Pendientes
-                </h2>
-
-              </div>
-
-            </div>
-
-          </Link>
-
-
-
-          {/* ANILLOS */}
+          {/* RINGS */}
 
           <Link
             href="/shop/rings"
-            className="group cursor-pointer block"
+            className="group"
           >
 
-            <div className="relative overflow-hidden rounded-[2.2rem] aspect-[3/4]">
+            <div className="overflow-hidden rounded-[2rem] md:rounded-[2.2rem]">
 
               <img
                 src="/images/categories/rings-category.png"
-                alt="Anillos"
-                className="w-full h-full object-cover object-center transition duration-700 group-hover:scale-[1.03]"
+                alt="Rings"
+                className="h-[420px] w-full object-cover transition-transform duration-[2200ms] ease-out group-hover:scale-[1.04] md:h-[620px]"
               />
 
-              <div className="absolute inset-0 bg-black/15" />
+            </div>
 
-              <div className="absolute bottom-8 left-8">
+            <div className="pt-5 md:pt-6">
 
-                <p className="text-white/70 uppercase tracking-[0.25em] text-[11px] mb-3">
-                  Scheherezade Life
-                </p>
-
-                <h2
-                  className="text-white text-4xl tracking-[-0.05em]"
-                  style={{ fontFamily: "Cormorant Garamond, serif" }}
-                >
-                  Anillos
-                </h2>
-
-              </div>
+              <h2
+                className="text-[1.7rem] md:text-[2rem]"
+                style={{ fontFamily: "Cormorant Garamond, serif" }}
+              >
+                Rings
+              </h2>
 
             </div>
 
           </Link>
 
+          {/* EARRINGS */}
 
+          <Link
+            href="/shop/earrings"
+            className="group"
+          >
 
-          {/* COLGANTES */}
+            <div className="overflow-hidden rounded-[2rem] md:rounded-[2.2rem]">
+
+              <img
+                src="/images/categories/earrings-category.png"
+                alt="Earrings"
+                className="h-[420px] w-full object-cover transition-transform duration-[2200ms] ease-out group-hover:scale-[1.04] md:h-[620px]"
+              />
+
+            </div>
+
+            <div className="pt-5 md:pt-6">
+
+              <h2
+                className="text-[1.7rem] md:text-[2rem]"
+                style={{ fontFamily: "Cormorant Garamond, serif" }}
+              >
+                Earrings
+              </h2>
+
+            </div>
+
+          </Link>
+
+          {/* PENDANTS */}
 
           <Link
             href="/shop/pendants"
-            className="group cursor-pointer block"
+            className="group"
           >
 
-            <div className="relative overflow-hidden rounded-[2.2rem] aspect-[3/4]">
+            <div className="overflow-hidden rounded-[2rem] md:rounded-[2.2rem]">
 
               <img
                 src="/images/categories/pendants-category.png"
-                alt="Colgantes"
-                className="w-full h-full object-cover object-center transition duration-700 group-hover:scale-[1.03]"
+                alt="Pendants"
+                className="h-[420px] w-full object-cover transition-transform duration-[2200ms] ease-out group-hover:scale-[1.04] md:h-[620px]"
               />
 
-              <div className="absolute inset-0 bg-black/15" />
+            </div>
 
-              <div className="absolute bottom-8 left-8">
+            <div className="pt-5 md:pt-6">
 
-                <p className="text-white/70 uppercase tracking-[0.25em] text-[11px] mb-3">
-                  Scheherezade Life
-                </p>
-
-                <h2
-                  className="text-white text-4xl tracking-[-0.05em]"
-                  style={{ fontFamily: "Cormorant Garamond, serif" }}
-                >
-                  Colgantes
-                </h2>
-
-              </div>
+              <h2
+                className="text-[1.7rem] md:text-[2rem]"
+                style={{ fontFamily: "Cormorant Garamond, serif" }}
+              >
+                Pendants
+              </h2>
 
             </div>
 

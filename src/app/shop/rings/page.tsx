@@ -1,5 +1,5 @@
 "use client";
-
+import Navbar from "@/components/Navbar";
 import Link from "next/link";
 
 const rings = [
@@ -35,42 +35,7 @@ export default function RingsPage() {
   return (
     <main className="bg-[#f5f1eb] min-h-screen text-black">
 
-      {/* NAVBAR */}
-
-      <header className="sticky top-0 z-50 px-4 md:px-8 pt-4">
-
-        <div className="backdrop-blur-md bg-[#a7a19c]/90 rounded-full px-8 py-5 flex items-center justify-between">
-
-          <Link
-            href="/"
-            className="tracking-[0.35em] uppercase text-[11px] text-white"
-          >
-            SCHEHEREZADE LIFE
-          </Link>
-
-          <div className="flex items-center gap-10">
-
-            <Link
-              href="/journal"
-              className="tracking-[0.28em] uppercase text-[11px] text-white"
-            >
-              Journal
-            </Link>
-
-            <Link
-              href="/shop"
-              className="tracking-[0.28em] uppercase text-[11px] text-white"
-            >
-              Shop
-            </Link>
-
-          </div>
-
-        </div>
-
-      </header>
-
-
+    
 
      {/* CATEGORY HEADER */}
 
@@ -104,7 +69,7 @@ export default function RingsPage() {
 
   <div className="max-w-[720px]">
 
-    <p className="uppercase tracking-[0.32em] text-[11px] opacity-50 mb-5">
+    <p className="uppercase tracking-[0.32em] text-[11px] opacity-70 mb-5">
       Sculptural Silver
     </p>
 
@@ -139,13 +104,13 @@ export default function RingsPage() {
                 <img
   src={product.editorial}
   alt={product.name}
-  className="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:opacity-0"
+  className="absolute inset-0 w-full h-full object-cover transition duration-[1600ms] group-hover:opacity-0"
 />
 
 <img
   src={product.worn}
   alt={product.name}
-  className="absolute inset-0 w-full h-full object-cover opacity-0 transition duration-700 group-hover:opacity-100"
+  className="absolute inset-0 w-full h-full object-cover opacity-0 transition duration-[1600ms] group-hover:opacity-100"
 />
               </div>
 

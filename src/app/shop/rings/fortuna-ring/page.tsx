@@ -1,5 +1,5 @@
 "use client";
-
+import Navbar from "@/components/Navbar";
 import Link from "next/link";
 import { useState } from "react";
 import RelatedProducts from "@/components/RelatedProducts";
@@ -28,42 +28,7 @@ export default function MambaRingPage() {
 
     <main className="bg-[#f5f1eb] min-h-screen text-black">
 
-      {/* NAVBAR */}
-
-      <header className="sticky top-0 z-50 px-4 md:px-8 pt-4">
-
-        <div className="backdrop-blur-md bg-[#a7a19c]/90 rounded-full px-8 py-5 flex items-center justify-between">
-
-          <Link
-            href="/"
-            className="tracking-[0.35em] uppercase text-[11px] text-white"
-          >
-            SCHEHEREZADE LIFE
-          </Link>
-
-          <div className="flex items-center gap-10">
-
-            <Link
-              href="/journal"
-              className="tracking-[0.28em] uppercase text-[11px] text-white"
-            >
-              Journal
-            </Link>
-
-            <Link
-              href="/shop"
-              className="tracking-[0.28em] uppercase text-[11px] text-white"
-            >
-              Shop
-            </Link>
-
-          </div>
-
-        </div>
-
-      </header>
-
-
+      
 
       {/* PRODUCT */}
 
@@ -105,7 +70,7 @@ export default function MambaRingPage() {
 
           <div>
 
-            <div className="relative overflow-hidden rounded-[2.5rem] bg-[#ebe7e2]">
+            <div className="relative overflow-hidden rounded-[2.2rem] bg-[#ebe7e2]">
 
               <img
                 src={activeImage}
@@ -153,7 +118,7 @@ export default function MambaRingPage() {
 
           <div className="lg:sticky lg:top-32">
 
-            <p className="uppercase tracking-[0.32em] text-[11px] opacity-50 mb-5">
+            <p className="uppercase tracking-[0.32em] text-[11px] opacity-70 mb-5">
               Scheherezade Selection
             </p>
 
@@ -219,6 +184,7 @@ export default function MambaRingPage() {
   category="rings"
   currentProduct="fortuna-ring"
 />
+
     </main>
 
   );

@@ -112,13 +112,13 @@ export default function RelatedProducts({
               <img
                 src={product.editorial}
                 alt={product.name}
-                className="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:opacity-0"
+                className="absolute inset-0 w-full h-full object-cover transition-all duration-[1600ms] ease-out group-hover:opacity-0 group-hover:scale-[1.02]"
               />
 
               <img
                 src={product.worn}
                 alt={product.name}
-                className="absolute inset-0 w-full h-full object-cover opacity-0 transition duration-700 group-hover:opacity-100"
+                className="absolute inset-0 w-full h-full object-cover opacity-0 transition-all duration-[1600ms] ease-out group-hover:opacity-100 group-hover:scale-[1.02]"
               />
 
             </div>

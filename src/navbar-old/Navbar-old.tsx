@@ -41,7 +41,7 @@ export default function Navbar() {
               items-center
               justify-between
               transition-all
-              duration-700
+              duration-[1600ms]
               backdrop-blur-xl
               border
               border-white/10
@@ -83,7 +83,7 @@ export default function Navbar() {
 
   <button
     onClick={() => setCartOpen(true)}
-    className="hover:opacity-50 transition duration-500"
+    className="hover:opacity-70 transition duration-[1200ms]"
   >
     <ShoppingBag size={18} strokeWidth={1.5} />
   </button>
@@ -102,7 +102,7 @@ export default function Navbar() {
 
   <button
     onClick={() => setCartOpen(true)}
-   className="relative hover:opacity-50 transition duration-500"
+   className="relative hover:opacity-70 transition duration-[1200ms]"
   >
     <ShoppingBag size={18} strokeWidth={1.5} />
     <span className="absolute -top-1 -right-1 text-[9px] tracking-[0.14em] text-[#8a8178]">
