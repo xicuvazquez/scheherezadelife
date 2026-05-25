@@ -40,12 +40,6 @@ export default function Navbar() {
 
           <div className="hidden items-center gap-8 md:flex">
 
-            <Link
-              href="/journal"
-              className={linkStyle("/journal")}
-            >
-              Journal
-            </Link>
 
             <Link
               href="/about"
@@ -146,18 +140,7 @@ export default function Navbar() {
 
   Home
 
-</Link>
 
-        <Link
-  href="/journal"
-  onClick={() => setMenuOpen(false)}
-  className="group flex items-center gap-3 text-[3.2rem] leading-[0.9] tracking-[-0.05em] text-[#1d1d1d] transition-all duration-500 hover:translate-x-[6px]"
-  style={{ fontFamily: "Cormorant Garamond, serif" }}
->
-
-  <span className="h-[1px] w-0 bg-black/40 transition-all duration-500 group-hover:w-8"></span>
-
-  Journal
 
 </Link>
 

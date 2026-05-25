@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Navbar from "@/components/Navbar";
 
 export default function ScheherezadeLifeLanding() {
 
@@ -7,25 +6,25 @@ export default function ScheherezadeLifeLanding() {
 
     <main className="min-h-screen bg-[#f5f1ea] text-[#2b2b2b] font-serif">
 
-
       {/* HERO */}
+
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
 
         {/* DESKTOP HERO */}
 
-<img
-  src="/images/hero-webp.png"
-  alt="Mediterranean atmosphere"
-  className="absolute inset-0 hidden h-full w-full object-cover scale-100 transition duration-[4000ms] ease-out hover:scale-[1.03] md:block"
-/>
+        <img
+          src="/images/hero-webp.png"
+          alt="Mediterranean atmosphere"
+          className="absolute inset-0 hidden h-full w-full object-cover scale-100 transition duration-[4000ms] ease-out hover:scale-[1.03] md:block"
+        />
 
-{/* MOBILE HERO */}
+        {/* MOBILE HERO */}
 
-<img
-  src="/images/hero-mobile.png"
-  alt="Mediterranean atmosphere"
-  className="absolute inset-0 block h-full w-full object-cover md:hidden"
-/>
+        <img
+          src="/images/hero-mobile.png"
+          alt="Mediterranean atmosphere"
+          className="absolute inset-0 block h-full w-full object-cover md:hidden"
+        />
 
         <div className="absolute inset-0 bg-black/10"></div>
 
@@ -41,34 +40,61 @@ export default function ScheherezadeLifeLanding() {
 
       </section>
 
+
+
       {/* ABOUT */}
+
       <section className="py-20 px-6 md:px-24 max-w-[1600px] mx-auto grid md:grid-cols-2 gap-12 items-center">
 
-        <div>
+        {/* LEFT */}
 
-          <h2 className="text-5xl md:text-6xl mb-10 tracking-wide max-w-[600px]">
+        <div className="order-1 md:order-1">
 
-            Mediterranean light,
-            cast in silver
+          {/* TITLE */}
+
+          <h2 className="text-4xl md:text-6xl mb-10 tracking-wide max-w-[600px]">
+
+            Una colección construida alrededor de la luz, la textura y las formas sencillas.
 
           </h2>
 
+
+
+          {/* IMAGE MOBILE */}
+
+          <div className="mb-10 md:hidden">
+
+            <img
+              src="/images/editorial-1.png"
+              alt="Interior"
+              className="object-cover brightness-[0.92] contrast-[1.04] saturate-[0.88] sepia-[0.06] w-full rounded-[2.2rem]"
+            />
+
+          </div>
+
+
+
+          {/* TEXT */}
+
           <p className="text-xl leading-8 text-neutral-700 mb-6">
 
-            Sterling silver objects inspired by sea light, texture and slow living.
+            Complementos que acompañan y te hacen brillar en tu propia esencia.
 
           </p>
 
           <p className="text-xl leading-8 text-neutral-600">
 
-            More than a jewelry brand, it is a visual identity built around texture,
-            silence, refinement and perception.
+            Una experiencia que abarca texturas, aromas y colores en diseños.
 
           </p>
 
         </div>
 
-        <div>
+
+
+        {/* IMAGE DESKTOP */}
+
+        <div className="hidden md:block">
 
           <img
             src="/images/editorial-1.png"

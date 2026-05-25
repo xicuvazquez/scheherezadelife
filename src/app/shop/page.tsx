@@ -18,7 +18,7 @@ export default function ShopPage() {
             className="max-w-[95%] text-[3.6rem] leading-[0.9] tracking-[-0.06em] md:max-w-[900px] md:text-[5rem] md:leading-[0.92]"
             style={{ fontFamily: "Cormorant Garamond, serif" }}
           >
-            Sterling silver objects shaped by atmosphere and presence.
+            Joyas de plata 925.
           </h1>
 
         </div>
@@ -34,12 +34,12 @@ export default function ShopPage() {
             className="group"
           >
 
-            <div className="overflow-hidden rounded-[2rem] md:rounded-[2.2rem]">
+            <div className="overflow-hidden rounded-none md:[2.2rem]">
 
               <img
                 src="/images/categories/rings-category.png"
                 alt="Rings"
-                className="h-[420px] w-full object-cover transition-transform duration-[2200ms] ease-out group-hover:scale-[1.04] md:h-[620px]"
+                className="h-[320px] w-full object-cover transition-transform duration-[2200ms] ease-out group-hover:scale-[1.04] md:h-[420px]"
               />
 
             </div>
@@ -50,7 +50,7 @@ export default function ShopPage() {
                 className="text-[1.7rem] md:text-[2rem]"
                 style={{ fontFamily: "Cormorant Garamond, serif" }}
               >
-                Rings
+                Anillos
               </h2>
 
             </div>
@@ -64,12 +64,12 @@ export default function ShopPage() {
             className="group"
           >
 
-            <div className="overflow-hidden rounded-[2rem] md:rounded-[2.2rem]">
+            <div className="overflow-hidden rounded-none [2.2rem]">
 
               <img
                 src="/images/categories/earrings-category.png"
                 alt="Earrings"
-                className="h-[420px] w-full object-cover transition-transform duration-[2200ms] ease-out group-hover:scale-[1.04] md:h-[620px]"
+                className="h-[320px] w-full object-cover transition-transform duration-[2200ms] ease-out group-hover:scale-[1.04] md:h-[420px]"
               />
 
             </div>
@@ -80,7 +80,7 @@ export default function ShopPage() {
                 className="text-[1.7rem] md:text-[2rem]"
                 style={{ fontFamily: "Cormorant Garamond, serif" }}
               >
-                Earrings
+                Pendientes
               </h2>
 
             </div>
@@ -94,12 +94,12 @@ export default function ShopPage() {
             className="group"
           >
 
-            <div className="overflow-hidden rounded-[2rem] md:rounded-[2.2rem]">
+            <div className="overflow-hidden rounded-none md:[2.2rem]">
 
               <img
                 src="/images/categories/pendants-category.png"
                 alt="Pendants"
-                className="h-[420px] w-full object-cover transition-transform duration-[2200ms] ease-out group-hover:scale-[1.04] md:h-[620px]"
+                className="h-[320px] w-full object-cover transition-transform duration-[2200ms] ease-out group-hover:scale-[1.04] md:h-[420px]"
               />
 
             </div>
@@ -110,7 +110,7 @@ export default function ShopPage() {
                 className="text-[1.7rem] md:text-[2rem]"
                 style={{ fontFamily: "Cormorant Garamond, serif" }}
               >
-                Pendants
+                Colgantes
               </h2>
 
             </div>
