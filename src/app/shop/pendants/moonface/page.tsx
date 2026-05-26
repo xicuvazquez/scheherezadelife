@@ -18,7 +18,7 @@ const product = {
 
   editorial: "/images/products/colgante-moonface-editorial.png",
 
-  worn: "/images/products/colgante-moonface-worn.png",
+  worn: "/images/products/colante-moonface-worn.png",
 };
 
 export default function MoonfacePendantPage() {
@@ -183,7 +183,7 @@ export default function MoonfacePendantPage() {
 
 <RelatedProducts
   category="pendants"
-  currentProduct="moonface-pendant"
+  currentProduct="colgante-moonface"
 />
 
     </main>
