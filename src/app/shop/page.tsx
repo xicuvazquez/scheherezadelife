@@ -2,125 +2,83 @@ import Link from "next/link";
 
 export default function ShopPage() {
   return (
-    <main className="bg-[#f5f1eb] px-4 pt-24 pb-16 text-[#1d1d1d] md:pt-28 md:pb-20">
+    <main className="min-h-screen bg-[#f5f1eb] px-6 pt-32 pb-20 text-[#2b2b2b] font-serif md:px-20 md:pt-36 md:pb-24">
+      <section className="mx-auto max-w-[1040px]">
+        <div className="grid grid-cols-1 gap-3 md:grid-cols-[0.72fr_1fr]">
+          {/* INTRO */}
+          <div className="flex flex-col justify-center bg-[#f5f1eb] py-8 md:pr-12">
+            <p className="mb-5 text-[10px] uppercase tracking-[0.28em] text-black/45">
+              Joyas de plata 925
+            </p>
 
-      <section className="mx-auto max-w-[1450px]">
+            <h1 className="max-w-[380px] text-[2.45rem] leading-[1.02] tracking-[-0.04em] md:text-[3rem] lg:text-[3.35rem]">
+              Diseñadas para acompañarte en cada momento.
+            </h1>
 
-        {/* HERO */}
-
-        <div className="mb-14 md:mb-16">
-
-          <p className="mb-5 text-[10px] uppercase tracking-[0.28em] opacity-40 md:mb-6">
-            Shop
-          </p>
-
-          <h1
-            className="max-w-[95%] text-[3.6rem] leading-[0.9] tracking-[-0.06em] md:max-w-[900px] md:text-[5rem] md:leading-[0.92]"
-            style={{ fontFamily: "Cormorant Garamond, serif" }}
-          >
-            Joyas de plata 925.
-          </h1>
-
-        </div>
-
-        {/* CATEGORIES */}
-
-        <div className="grid gap-8 md:grid-cols-3 md:gap-10">
+            <a
+              href="#categorias"
+              className="mt-8 w-fit border-b border-black/35 pb-1 text-[10px] uppercase tracking-[0.28em] text-black/60 transition-opacity hover:opacity-55"
+            >
+              Ver categorías →
+            </a>
+          </div>
 
           {/* RINGS */}
+          <Link href="/shop/rings" className="group relative overflow-hidden">
+            <img
+              src="/images/categories/rings-category.png"
+              alt="Anillos"
+              className="h-[300px] w-full object-cover transition-transform duration-[2200ms] ease-out group-hover:scale-[1.035] md:h-[360px]"
+            />
 
-          <Link
-            href="/shop/rings"
-            className="group"
-          >
+            <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-black/5 to-transparent" />
 
-            <div className="overflow-hidden rounded-none md:[2.2rem]">
-
-              <img
-                src="/images/categories/rings-category.png"
-                alt="Rings"
-                className="h-[320px] w-full object-cover transition-transform duration-[2200ms] ease-out group-hover:scale-[1.04] md:h-[420px]"
-              />
-
+            <div className="absolute bottom-5 left-5">
+              <p className="text-[10px] uppercase tracking-[0.28em] text-white drop-shadow-md">
+                Anillos →
+              </p>
             </div>
-
-            <div className="pt-5 md:pt-6">
-
-              <h2
-                className="text-[1.7rem] md:text-[2rem]"
-                style={{ fontFamily: "Cormorant Garamond, serif" }}
-              >
-                Anillos
-              </h2>
-
-            </div>
-
           </Link>
 
           {/* EARRINGS */}
-
           <Link
+            id="categorias"
             href="/shop/earrings"
-            className="group"
+            className="group relative overflow-hidden"
           >
+            <img
+              src="/images/categories/earrings-category.png"
+              alt="Pendientes"
+              className="h-[250px] w-full object-cover transition-transform duration-[2200ms] ease-out group-hover:scale-[1.035] md:h-[280px]"
+            />
 
-            <div className="overflow-hidden rounded-none [2.2rem]">
+            <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-black/5 to-transparent" />
 
-              <img
-                src="/images/categories/earrings-category.png"
-                alt="Earrings"
-                className="h-[320px] w-full object-cover transition-transform duration-[2200ms] ease-out group-hover:scale-[1.04] md:h-[420px]"
-              />
-
+            <div className="absolute bottom-5 left-5">
+              <p className="text-[10px] uppercase tracking-[0.28em] text-white drop-shadow-md">
+                Pendientes →
+              </p>
             </div>
-
-            <div className="pt-5 md:pt-6">
-
-              <h2
-                className="text-[1.7rem] md:text-[2rem]"
-                style={{ fontFamily: "Cormorant Garamond, serif" }}
-              >
-                Pendientes
-              </h2>
-
-            </div>
-
           </Link>
 
           {/* PENDANTS */}
+          <Link href="/shop/pendants" className="group relative overflow-hidden">
+            <img
+              src="/images/categories/pendants-category.png"
+              alt="Colgantes"
+              className="h-[250px] w-full object-cover transition-transform duration-[2200ms] ease-out group-hover:scale-[1.035] md:h-[280px]"
+            />
 
-          <Link
-            href="/shop/pendants"
-            className="group"
-          >
+            <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-black/5 to-transparent" />
 
-            <div className="overflow-hidden rounded-none md:[2.2rem]">
-
-              <img
-                src="/images/categories/pendants-category.png"
-                alt="Pendants"
-                className="h-[320px] w-full object-cover transition-transform duration-[2200ms] ease-out group-hover:scale-[1.04] md:h-[420px]"
-              />
-
+            <div className="absolute bottom-5 left-5">
+              <p className="text-[10px] uppercase tracking-[0.28em] text-white drop-shadow-md">
+                Colgantes →
+              </p>
             </div>
-
-            <div className="pt-5 md:pt-6">
-
-              <h2
-                className="text-[1.7rem] md:text-[2rem]"
-                style={{ fontFamily: "Cormorant Garamond, serif" }}
-              >
-                Colgantes
-              </h2>
-
-            </div>
-
           </Link>
-
         </div>
-
       </section>
-
     </main>
   );
 }

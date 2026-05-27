@@ -1,88 +1,50 @@
 export default function AboutPage() {
   return (
-
-    <main className="bg-[#f5f1eb] px-4 pt-24 pb-16 text-[#1d1d1d] md:px-6 md:pt-40 md:pb-24">
-
-      <section className="mx-auto max-w-[1500px]">
-
-        {/* HERO */}
-
-        <div className="grid items-center gap-10 md:grid-cols-[1fr_1fr] md:gap-14">
-
+    <main className="min-h-screen bg-[#f5f1eb] px-6 pt-32 pb-20 text-[#2b2b2b] font-serif md:px-20 md:pt-36 md:pb-24">
+      <section className="mx-auto max-w-[1100px]">
+        <div className="grid grid-cols-1 items-center gap-10 md:grid-cols-[0.9fr_0.8fr] md:gap-16">
+          
           {/* LEFT */}
-
-          <div className="max-w-[620px]">
-
-            <p className="mb-6 text-[10px] uppercase tracking-[0.28em] opacity-65">
+          <div className="max-w-[520px]">
+            <p className="mb-6 text-[10px] uppercase tracking-[0.28em] text-black/55">
               About
             </p>
 
-            <h1
-              className="text-[2.95rem] leading-[0.88] tracking-[-0.07em] md:text-[4.1rem]"
-              style={{ fontFamily: "Cormorant Garamond, serif" }}
-            >
-              Objetos de plata seleccionados por atmósfera y presencia.
+            <h1 className="text-[2.5rem] leading-[1.05] tracking-[-0.04em] text-[#2b2b2b] md:text-[3.2rem] lg:text-[3.6rem]">
+              Objetos de plata y acero seleccionados por atmósfera y presencia.
             </h1>
 
-            {/* DESKTOP TEXT */}
-
-            <div className="mt-10 hidden max-w-[540px] space-y-7 md:block">
-
-              <p className="text-[0.95rem] leading-[1.9] text-black/85 md:text-[1.28rem]">
-
-                Scheherezade Life explora una estética construida alrededor de la plata, la textura, la arquitectura mediterránea y los objetos con presencia escultórica.
-
-              </p>
-
-              <p className="text-[0.95rem] leading-[1.9] text-black/85 md:text-[1.28rem]">
-
-                Cada pieza es seleccionada por coherencia visual, materialidad y permanencia, buscando crear una identidad silenciosa y editorial.
-
-              </p>
-
+            {/* IMAGE MOBILE */}
+            <div className="mt-8 md:hidden">
+              <img
+                src="/images/about/about-hero.png"
+                alt="Scheherezade Life"
+                className="h-[380px] w-full object-cover brightness-[0.94] contrast-[1.03] saturate-[0.9] sepia-[0.04]"
+              />
             </div>
 
+            <div className="mt-8 max-w-[440px] space-y-5">
+              <p className="text-[1.08rem] leading-8 text-neutral-700 md:text-[1.12rem]">
+                Scheherezade Life explora una estética construida alrededor de la plata, la textura, la arquitectura mediterránea y los objetos con presencia escultórica.
+              </p>
+
+              <p className="text-[1rem] leading-8 text-neutral-600">
+                Cada pieza es seleccionada por coherencia visual, materialidad y permanencia, buscando crear una identidad silenciosa y editorial.
+              </p>
+            </div>
           </div>
 
-
-
-          {/* RIGHT IMAGE */}
-
-          <div>
-
+          {/* RIGHT IMAGE DESKTOP */}
+          <div className="hidden md:flex justify-end">
             <img
               src="/images/about/about-hero.png"
               alt="Scheherezade Life"
-              className="h-[420px] w-full rounded-[2rem] object-cover md:h-[540px] md:rounded-[2.5rem]"
+              className="h-[500px] w-full max-w-[430px] object-cover brightness-[0.94] contrast-[1.03] saturate-[0.9] sepia-[0.04]"
             />
-
-          </div>
-
-
-
-          {/* MOBILE TEXT */}
-
-          <div className="order-3 mt-2 max-w-[620px] space-y-7 md:hidden">
-
-            <p className="text-[1.25rem] leading-[1.9] text-black/85">
-
-              Scheherezade Life explora una estética construida alrededor de la plata, la textura, la arquitectura mediterránea y los objetos con presencia escultórica.
-
-            </p>
-
-            <p className="text-[1.25rem] leading-[1.9] text-black/85">
-
-              Cada pieza es seleccionada por coherencia visual, materialidad y permanencia, buscando crear una identidad silenciosa y editorial.
-
-            </p>
-
           </div>
 
         </div>
-
       </section>
-
     </main>
-
   );
 }

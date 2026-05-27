@@ -44,67 +44,45 @@ export default function ScheherezadeLifeLanding() {
 
       {/* ABOUT */}
 
-      <section className="py-20 px-6 md:px-24 max-w-[1600px] mx-auto grid md:grid-cols-2 gap-12 items-center">
+<section className="px-6 py-16 md:px-20 md:py-20">
+  <div className="mx-auto grid max-w-[1100px] grid-cols-1 items-center gap-10 md:grid-cols-[0.9fr_0.8fr] md:gap-16">
 
-        {/* LEFT */}
+    {/* TEXT */}
+    <div className="max-w-[620px]">
+      <h2 className="text-[2.5rem] leading-[1.05] tracking-[-0.04em] text-[#2b2b2b] md:text-[3.2rem] lg:text-[3.6rem]">
+        Una colección construida alrededor de la luz, la textura y las formas sencillas.
+      </h2>
 
-        <div className="order-1 md:order-1">
+      {/* IMAGE MOBILE */}
+      <div className="mt-8 md:hidden">
+        <img
+          src="/images/editorial-1.png"
+          alt="Interior"
+          className="w-full object-cover brightness-[0.92] contrast-[1.04] saturate-[0.88] sepia-[0.06]"
+        />
+      </div>
 
-          {/* TITLE */}
+      <p className="mt-8 max-w-[420px] text-[1.48rem] leading-8 text-neutral-700 md:text-[1.22rem]">
+        Complementos que acompañan y te hacen brillar en tu propia esencia.
+      </p>
 
-          <h2 className="text-4xl md:text-6xl mb-10 tracking-wide max-w-[600px]">
+      <p className="mt-4 max-w-[620px] text-[1.08rem] leading-8 text-neutral-600">
+        Una experiencia que abarca texturas, aromas y colores en diseños. 
+        La calidez de la luz reflejada en el mar y el brillo envejecido nos recuerdan que el tiempo también puede convertirse en belleza.
+      </p>
+    </div>
 
-            Una colección construida alrededor de la luz, la textura y las formas sencillas.
+    {/* IMAGE DESKTOP */}
+    <div className="hidden md:flex justify-end">
+      <img
+        src="/images/editorial-1.png"
+        alt="Interior"
+        className="w-full max-w-[430px] object-cover brightness-[0.92] contrast-[1.04] saturate-[0.88] sepia-[0.06]"
+      />
+    </div>
 
-          </h2>
-
-
-
-          {/* IMAGE MOBILE */}
-
-          <div className="mb-10 md:hidden">
-
-            <img
-              src="/images/editorial-1.png"
-              alt="Interior"
-              className="object-cover brightness-[0.92] contrast-[1.04] saturate-[0.88] sepia-[0.06] w-full rounded-[2.2rem]"
-            />
-
-          </div>
-
-
-
-          {/* TEXT */}
-
-          <p className="text-xl leading-8 text-neutral-700 mb-6">
-
-            Complementos que acompañan y te hacen brillar en tu propia esencia.
-
-          </p>
-
-          <p className="text-xl leading-8 text-neutral-600">
-
-            Una experiencia que abarca texturas, aromas y colores en diseños.
-
-          </p>
-
-        </div>
-
-
-
-        {/* IMAGE DESKTOP */}
-
-        <div className="hidden md:block">
-
-          <img
-            src="/images/editorial-1.png"
-            alt="Interior"
-            className="object-cover brightness-[0.92] contrast-[1.04] saturate-[0.88] sepia-[0.06] w-[830px] rounded-[2.2rem]"
-          />
-
-        </div>
-
-      </section>
+  </div>
+</section>
 
     </main>
 
