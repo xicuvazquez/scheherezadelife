@@ -1,89 +1,130 @@
 "use client";
 
 import Link from "next/link";
+import { useState } from "react";
+import RelatedProducts from "@/components/RelatedProducts";
+
+const product = {
+  name: "Sunrise",
+
+  price: "59€",
+
+  description:
+    "A warm silver pendant selected for its quiet presence, organic surface and soft reflection of light.",
+
+  materials: ["Sterling Silver 925", "Hand polished finish"],
+
+  editorial: "/images/products/sunrise-editorial.png",
+
+  worn: "/images/products/sunrise-worn.png",
+};
 
 export default function SunrisePendantPage() {
+  const [activeImage, setActiveImage] = useState(product.editorial);
+
   return (
-    <main className="min-h-screen bg-[#f5f1eb] px-6 pt-32 pb-24 text-[#2b2b2b] font-serif md:px-20 md:pt-36">
-      <section className="mx-auto max-w-[1180px]">
+    <main className="bg-[#f5f1eb] min-h-screen text-black">
+      {/* PRODUCT */}
+      <section className="max-w-[1600px] mx-auto px-8 md:px-14 pt-14 pb-32">
         {/* BREADCRUMB */}
-        <div className="mb-10 flex items-center gap-3 text-[10px] uppercase tracking-[0.24em] text-black/40">
-          <Link href="/" className="transition-opacity hover:opacity-55">
-            Home
-          </Link>
+        <div className="flex items-center gap-3 text-[11px] uppercase tracking-[0.22em] opacity-45 mb-10">
+          <Link href="/">Home</Link>
 
           <span>/</span>
 
-          <Link href="/shop" className="transition-opacity hover:opacity-55">
-            Shop
-          </Link>
+          <Link href="/shop">Shop</Link>
 
           <span>/</span>
 
-          <Link
-            href="/shop/pendants"
-            className="transition-opacity hover:opacity-55"
-          >
-            Colgantes
-          </Link>
+          <Link href="/shop/pendants">Colgantes</Link>
 
           <span>/</span>
 
-          <span>Sunrise</span>
+          <span className="opacity-80">Sunrise</span>
         </div>
 
-        {/* PRODUCT LAYOUT */}
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-[1fr_0.8fr]">
-          {/* IMAGE */}
-          <div className="relative overflow-hidden">
-            <img
-              src="/images/products/sunrise-editorial.png"
-              alt="Sunrise Pendant"
-              className="h-[420px] w-full object-cover md:h-[620px]"
-            />
-          </div>
-
-          {/* INFO */}
-          <div className="flex flex-col justify-center py-6 md:px-10">
-            <p className="mb-5 text-[10px] uppercase tracking-[0.28em] text-black/45">
-              Sculptural Pendant
-            </p>
-
-            <h1 className="max-w-[420px] text-[2.8rem] leading-[1.02] tracking-[-0.04em] md:text-[3.5rem]">
-              Sunrise
-            </h1>
-
-            <p className="mt-4 text-[10px] uppercase tracking-[0.24em] text-black/40">
-              59€
-            </p>
-
-            <p className="mt-10 max-w-[420px] text-[1.02rem] leading-8 text-neutral-700">
-              Un colgante inspirado en la luz cálida reflejada sobre superficies irregulares y formas silenciosas.
-            </p>
-
-            <p className="mt-5 max-w-[420px] text-[1rem] leading-8 text-neutral-600">
-              Diseñado para convivir con el cuerpo de forma natural, sin imponerse.
-            </p>
-
-            {/* SECOND IMAGE */}
-            <div className="mt-12 overflow-hidden">
+        <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-16 items-start">
+          {/* LEFT */}
+          <div>
+            <div className="relative overflow-hidden rounded-[2.2rem] bg-[#ebe7e2]">
               <img
-                src="/images/products/sunrise-worn.png"
-                alt="Sunrise worn"
-                className="h-[260px] w-full object-cover"
+                src={activeImage}
+                alt={product.name}
+                className="w-full aspect-[4/5] object-cover"
               />
             </div>
 
-            {/* BACK LINK */}
-            <Link
-              href="/shop/pendants"
-              className="mt-10 w-fit border-b border-black/20 pb-1 text-[10px] uppercase tracking-[0.28em] text-black/55 transition-opacity hover:opacity-55"
+            {/* IMAGE SWITCHER */}
+            <div className="flex gap-4 mt-5">
+              <button
+                onClick={() => setActiveImage(product.editorial)}
+                className={`px-5 py-2 rounded-full text-[11px] uppercase tracking-[0.22em] transition ${
+                  activeImage === product.editorial
+                    ? "bg-black text-white"
+                    : "bg-[#e5dfd8]"
+                }`}
+              >
+                Editorial
+              </button>
+
+              <button
+                onClick={() => setActiveImage(product.worn)}
+                className={`px-5 py-2 rounded-full text-[11px] uppercase tracking-[0.22em] transition ${
+                  activeImage === product.worn
+                    ? "bg-black text-white"
+                    : "bg-[#e5dfd8]"
+                }`}
+              >
+                Worn
+              </button>
+            </div>
+          </div>
+
+          {/* RIGHT */}
+          <div className="lg:sticky lg:top-32">
+            <p className="uppercase tracking-[0.32em] text-[11px] opacity-70 mb-5">
+              Scheherezade Selection
+            </p>
+
+            <h1
+              className="text-[clamp(3rem,6vw,5rem)] leading-[0.92] tracking-[-0.06em] mb-6"
+              style={{ fontFamily: "Cormorant Garamond, serif" }}
             >
-              Volver a colgantes →
-            </Link>
+              {product.name}
+            </h1>
+
+            <p className="text-lg opacity-75 leading-relaxed max-w-[520px] mb-10">
+              {product.description}
+            </p>
+
+            <div className="text-[2rem] tracking-[-0.04em] mb-10">
+              {product.price}
+            </div>
+
+            {/* MATERIALS */}
+            <div className="border-t border-black/10 pt-8 mb-10">
+              <p className="uppercase tracking-[0.26em] text-[11px] opacity-45 mb-5">
+                Materials
+              </p>
+
+              <div className="space-y-3">
+                {product.materials.map((material) => (
+                  <div key={material} className="text-sm opacity-70">
+                    {material}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* BUTTON */}
+            <button className="w-full bg-black text-white rounded-full py-5 uppercase tracking-[0.28em] text-[11px] hover:opacity-90 transition">
+              Add to cart
+            </button>
           </div>
         </div>
       </section>
+
+      <RelatedProducts category="pendants" currentProduct="sunrise-pendant" />
     </main>
   );
 }
