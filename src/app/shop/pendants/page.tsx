@@ -11,6 +11,14 @@ const pendants = [
     editorial: "/images/products/colgante-moonface-editorial.png",
     worn: "/images/products/colgante-moonface-worn.png",
   },
+  {
+    id: 2,
+    slug: "sunrise-pendant",
+    name: "Sunrise",
+    price: "59€",
+    editorial: "/images/products/sunrise-editorial.png",
+    worn: "/images/products/sunrise-worn.png",
+  },
 ];
 
 export default function PendantsPage() {
