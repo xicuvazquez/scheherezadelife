@@ -63,7 +63,7 @@ export default function ScheherezadeLifeLanding() {
       </div>
 
       <p className="mt-8 max-w-[420px] text-[1.48rem] leading-8 text-neutral-700 md:text-[1.22rem]">
-        Complementos que acompañan y te hacen brillar en tu propia esencia.
+        Scheherezade Life es una selección de joyas y complementos en tonos plata, elegidos por su forma, textura y presencia.
       </p>
 
       <p className="mt-4 max-w-[620px] text-[1.08rem] leading-8 text-neutral-600">
