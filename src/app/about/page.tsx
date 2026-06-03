@@ -25,11 +25,12 @@ export default function AboutPage() {
 
             <div className="mt-8 max-w-[440px] space-y-5">
               <p className="text-[1.08rem] leading-8 text-neutral-700 md:text-[1.12rem]">
-                Scheherezade Life explora una estética construida alrededor de la plata, la textura, la arquitectura mediterránea y los objetos con presencia escultórica.
+                Scheherezade Life nace como una selección cuidada de joyas y complementos con presencia visual: piezas plateadas, formas limpias, texturas discretas y una estética inspirada en la luz mediterránea.
+
               </p>
 
               <p className="text-[1rem] leading-8 text-neutral-600">
-                Cada pieza es seleccionada por coherencia visual, materialidad y permanencia, buscando crear una identidad silenciosa y editorial.
+                No buscamos un catálogo masivo, sino una colección pequeña, coherente y reconocible.
               </p>
             </div>
           </div>
