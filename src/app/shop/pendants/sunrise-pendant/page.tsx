@@ -5,15 +5,21 @@ import { useState } from "react";
 import RelatedProducts from "@/components/RelatedProducts";
 
 const product = {
-  name: "Sunrise",
+  name: "Sunrise Pendant",
 
-  price: "59€",
+  price: "59,99€",
 
   description:
-    "A warm silver pendant selected for its quiet presence, organic surface and soft reflection of light.",
+        "Collar con colgante de sol dorado, seleccionado por su calidez, brillo y presencia delicada sobre la piel.",
 
-  materials: ["Sterling Silver 925", "Hand polished finish"],
-
+  materials: ["Plata de ley 925",
+    "Chapado en oro de 18 quilates",],
+  details: [
+    "Hecho a mano",
+    "Colgante con forma de sol",
+    "Sol de 14 mm",
+    "Cadena de 45 cm",
+  ],
   editorial: "/images/products/sunrise-editorial.png",
 
   worn: "/images/products/sunrise-worn.png",
@@ -102,20 +108,34 @@ export default function SunrisePendantPage() {
             </div>
 
             {/* MATERIALS */}
-            <div className="border-t border-black/10 pt-8 mb-10">
-              <p className="uppercase tracking-[0.26em] text-[11px] opacity-45 mb-5">
-                Materials
-              </p>
+<div className="border-t border-black/10 pt-8 mb-10">
+  <p className="uppercase tracking-[0.26em] text-[11px] opacity-45 mb-5">
+    Materiales
+  </p>
 
-              <div className="space-y-3">
-                {product.materials.map((material) => (
-                  <div key={material} className="text-sm opacity-70">
-                    {material}
-                  </div>
-                ))}
-              </div>
-            </div>
+  <div className="space-y-3">
+    {product.materials.map((material) => (
+      <div key={material} className="text-sm opacity-70">
+        {material}
+      </div>
+    ))}
+  </div>
+</div>
 
+{/* DESCRIPTION DETAILS */}
+<div className="border-t border-black/10 pt-8 mb-10">
+  <p className="uppercase tracking-[0.26em] text-[11px] opacity-45 mb-5">
+    Descripción
+  </p>
+
+  <div className="space-y-3">
+    {product.details.map((detail) => (
+      <div key={detail} className="text-sm opacity-70">
+        {detail}
+      </div>
+    ))}
+  </div>
+</div>
             {/* BUTTON */}
             <button className="w-full bg-black text-white rounded-full py-5 uppercase tracking-[0.28em] text-[11px] hover:opacity-90 transition">
               Add to cart

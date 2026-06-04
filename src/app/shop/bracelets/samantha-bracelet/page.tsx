@@ -1,96 +1,69 @@
 "use client";
-import Navbar from "@/components/Navbar";
+
 import Link from "next/link";
 import { useState } from "react";
 import RelatedProducts from "@/components/RelatedProducts";
-const product = {
-  name: "Moonface Pendant",
 
-  price: "49,99€",
+const product = {
+  name: "Samantha Bracelet",
+
+  price: "39,99",
 
   description:
-     "Colgante de plata maciza con una pequeña perla de agua dulce, seleccionado por su presencia simbólica y su delicadeza escultórica.",
+    "Pulsera de plata seleccionada por su estructura de eslabones ovalados, su brillo limpio y su presencia ligera sobre la piel.",
 
   materials: [
-     "Plata de ley 925 maciza",
-    "Perla de agua dulce",
+    "Plata de ley 925",
   ],
-details: [
-    "Tallado a mano en cera",
-    "Colgante de 2,5 cm aproximadamente",
-    "Cadena de 45 cm",
-  ],
-  editorial: "/images/products/colgante-moonface-editorial.png",
 
-  worn: "/images/products/colgante-moonface-worn.png",
+  details: [
+    "Eslabones ovalados",
+    "Acabado pulido",
+    "Cierre de mosquetón",
+  ],
+
+  editorial: "/images/products/samantha-bracelet-editorial.png",
+
+  worn: "/images/products/samantha-bracelet-worn.png",
 };
 
-export default function MoonfacePendantPage() {
-
+export default function SamanthaBraceletPage() {
   const [activeImage, setActiveImage] = useState(product.editorial);
 
   return (
-
     <main className="bg-[#f5f1eb] min-h-screen text-black">
-
-     
-
       {/* PRODUCT */}
-
       <section className="max-w-[1600px] mx-auto px-8 md:px-14 pt-14 pb-32">
-
         {/* BREADCRUMB */}
-
         <div className="flex items-center gap-3 text-[11px] uppercase tracking-[0.22em] opacity-45 mb-10">
-
-          <Link href="/">
-            Home
-          </Link>
+          <Link href="/">Home</Link>
 
           <span>/</span>
 
-          <Link href="/shop">
-            Shop
-          </Link>
+          <Link href="/shop">Shop</Link>
 
           <span>/</span>
 
-          <Link href="/shop/pendants">
-            Colgantes
-          </Link>
+          <Link href="/shop/bracelets">Pulseras</Link>
 
           <span>/</span>
 
-          <span className="opacity-80">
-            Moonface Pendant
-          </span>
-
+          <span className="opacity-80">Samantha Bracelet</span>
         </div>
 
-
-
         <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-16 items-start">
-
           {/* LEFT */}
-
           <div>
-
             <div className="relative overflow-hidden rounded-[2.2rem] bg-[#ebe7e2]">
-
               <img
                 src={activeImage}
                 alt={product.name}
                 className="w-full aspect-[4/5] object-cover"
               />
-
             </div>
 
-
-
             {/* IMAGE SWITCHER */}
-
             <div className="flex gap-4 mt-5">
-
               <button
                 onClick={() => setActiveImage(product.editorial)}
                 className={`px-5 py-2 rounded-full text-[11px] uppercase tracking-[0.22em] transition ${
@@ -112,19 +85,13 @@ export default function MoonfacePendantPage() {
               >
                 Worn
               </button>
-
             </div>
-
           </div>
 
-
-
           {/* RIGHT */}
-
           <div className="lg:sticky lg:top-32">
-
             <p className="uppercase tracking-[0.32em] text-[11px] opacity-70 mb-5">
-              Scheherezade Selection
+              Scheherezade Life
             </p>
 
             <h1
@@ -142,63 +109,45 @@ export default function MoonfacePendantPage() {
               {product.price}
             </div>
 
+            {/* MATERIALS */}
+            <div className="border-t border-black/10 pt-8 mb-10">
+              <p className="uppercase tracking-[0.26em] text-[11px] opacity-45 mb-5">
+                Materiales
+              </p>
 
+              <div className="space-y-3">
+                {product.materials.map((material) => (
+                  <div key={material} className="text-sm opacity-70">
+                    {material}
+                  </div>
+                ))}
+              </div>
+            </div>
 
-           {/* MATERIALS */}
-<div className="border-t border-black/10 pt-8 mb-10">
-  <p className="uppercase tracking-[0.26em] text-[11px] opacity-45 mb-5">
-    Materiales
-  </p>
+            {/* DESCRIPTION DETAILS */}
+            <div className="border-t border-black/10 pt-8 mb-10">
+              <p className="uppercase tracking-[0.26em] text-[11px] opacity-45 mb-5">
+                Descripción
+              </p>
 
-  <div className="space-y-3">
-    {product.materials.map((material) => (
-      <div
-        key={material}
-        className="text-sm opacity-70"
-      >
-        {material}
-      </div>
-    ))}
-  </div>
-</div>
+              <div className="space-y-3">
+                {product.details.map((detail) => (
+                  <div key={detail} className="text-sm opacity-70">
+                    {detail}
+                  </div>
+                ))}
+              </div>
+            </div>
 
-{/* DESCRIPTION DETAILS */}
-<div className="border-t border-black/10 pt-8 mb-10">
-  <p className="uppercase tracking-[0.26em] text-[11px] opacity-45 mb-5">
-    Descripción
-  </p>
-
-  <div className="space-y-3">
-    {product.details.map((detail) => (
-      <div
-        key={detail}
-        className="text-sm opacity-70"
-      >
-        {detail}
-      </div>
-    ))}
-  </div>
-</div>
             {/* BUTTON */}
-
             <button className="w-full bg-black text-white rounded-full py-5 uppercase tracking-[0.28em] text-[11px] hover:opacity-90 transition">
-
-              Add to cart
-
+              Añadir al carrito
             </button>
-
           </div>
-
         </div>
-
       </section>
 
-<RelatedProducts
-  category="pendants"
-  currentProduct="moonface-pendant"
-/>
-
+      <RelatedProducts category="bracelets" currentProduct="samantha-bracelet" />
     </main>
-
   );
 }

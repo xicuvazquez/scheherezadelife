@@ -4,16 +4,21 @@ import Link from "next/link";
 import { useState } from "react";
 import RelatedProducts from "@/components/RelatedProducts";
 const product = {
-  name: "Abstra Earrings",
+  name: "Zoco Earrings",
 
-  price: "49€",
+  price: "69,99€",
 
   description:
-    "Curated silver forms designed for quiet presence and subtle movement.",
+    "Pendientes de forma libre seleccionados por su movimiento y carácter visual.",
 
   materials: [
-    "Sterling Silver 925",
-    "Hand polished finish",
+    "Plata de ley 925",
+  ],
+
+  details: [
+    "Hechos a mano",
+    "Acabado pulido",
+    "Irregulares y únicos",
   ],
 
   editorial: "/images/products/abstra-editorial.png",
@@ -58,8 +63,8 @@ export default function AbstraEarringsPage() {
           <span>/</span>
 
           <span className="opacity-80">
-            Abstra Earrings
-          </span>
+  Zoco Earrings
+</span>
 
         </div>
 
@@ -141,37 +146,46 @@ export default function AbstraEarringsPage() {
 
 
             {/* MATERIALS */}
+<div className="border-t border-black/10 pt-8 mb-10">
+  <p className="uppercase tracking-[0.26em] text-[11px] opacity-45 mb-5">
+    Materiales
+  </p>
 
-            <div className="border-t border-black/10 pt-8 mb-10">
+  <div className="space-y-3">
+    {product.materials.map((material) => (
+      <div
+        key={material}
+        className="text-sm opacity-70"
+      >
+        {material}
+      </div>
+    ))}
+  </div>
+</div>
 
-              <p className="uppercase tracking-[0.26em] text-[11px] opacity-45 mb-5">
-                Materials
-              </p>
+{/* DESCRIPTION DETAILS */}
+<div className="border-t border-black/10 pt-8 mb-10">
+  <p className="uppercase tracking-[0.26em] text-[11px] opacity-45 mb-5">
+    Descripción
+  </p>
 
-              <div className="space-y-3">
-
-                {product.materials.map((material) => (
-
-                  <div
-                    key={material}
-                    className="text-sm opacity-70"
-                  >
-                    {material}
-                  </div>
-
-                ))}
-
-              </div>
-
-            </div>
-
-
+  <div className="space-y-3">
+    {product.details.map((detail) => (
+      <div
+        key={detail}
+        className="text-sm opacity-70"
+      >
+        {detail}
+      </div>
+    ))}
+  </div>
+</div>
 
             {/* BUTTON */}
 
             <button className="w-full bg-black text-white rounded-full py-5 uppercase tracking-[0.28em] text-[11px] hover:opacity-90 transition">
 
-              Add to cart
+              Añadir al carrito
 
             </button>
 

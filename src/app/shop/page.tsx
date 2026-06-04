@@ -77,6 +77,44 @@ export default function ShopPage() {
               </p>
             </div>
           </Link>
+    {/* BRACELETS */}
+<Link
+  href="/shop/bracelets"
+  className="group relative block h-[300px] overflow-hidden md:h-[300px]"
+>
+  <img
+    src="/images/categories/bracelets-category.png"
+    alt="Pulseras"
+    className="absolute inset-0 h-full w-full object-cover transition-transform duration-[2200ms] ease-out group-hover:scale-[1.03]"
+  />
+
+  <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-black/5 to-transparent" />
+
+  <div className="absolute bottom-5 left-5 z-10">
+    <p className="text-[10px] uppercase tracking-[0.28em] text-white drop-shadow-md">
+      Pulseras →
+    </p>
+  </div>
+</Link>
+       {/* SCHEHEREZADE SELECTION */}
+<Link
+  href="/shop/scheherezade-selection"
+  className="group relative block h-[300px] overflow-hidden md:h-[300px]"
+>
+  <img
+    src="/images/logo-scheherezade.png"
+    alt="Scheherezade Selection"
+    className="absolute inset-0 h-full w-full object-cover transition-transform duration-[2200ms] ease-out group-hover:scale-[1.03]"
+  />
+
+  <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-black/5 to-transparent" />
+
+  <div className="absolute bottom-5 left-5 z-10">
+    <p className="text-[10px] uppercase tracking-[0.28em] text-white drop-shadow-md">
+      Scheherezade Selection →
+    </p>
+  </div>
+</Link>
         </div>
       </section>
     </main>

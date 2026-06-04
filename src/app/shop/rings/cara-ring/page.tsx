@@ -4,18 +4,20 @@ import Link from "next/link";
 import { useState } from "react";
 import RelatedProducts from "@/components/RelatedProducts";
 const product = {
-  name: "Cara Ring",
+  name: "Nostalgia Ring",
 
-  price: "39€",
+  price: "39,99€",
 
   description:
-    "Curated silver forms selected for quiet presence and sculptural simplicity.",
+    "Anillo de plata seleccionado por su forma irregular, su presencia discreta y su carácter único.",
 
   materials: [
-    "Sterling Silver 925",
-    "Hand polished finish",
+    "Plata de ley 925",
   ],
-
+details: [
+    "Hecho a mano",
+    "Irregular y único",
+  ],
   editorial: "/images/products/cararing-editorial.png",
 
   worn: "/images/products/cararing-worn.png",
@@ -140,32 +142,40 @@ export default function MambaRingPage() {
 
 
             {/* MATERIALS */}
+<div className="border-t border-black/10 pt-8 mb-10">
+  <p className="uppercase tracking-[0.26em] text-[11px] opacity-45 mb-5">
+    Materiales
+  </p>
 
-            <div className="border-t border-black/10 pt-8 mb-10">
+  <div className="space-y-3">
+    {product.materials.map((material) => (
+      <div
+        key={material}
+        className="text-sm opacity-70"
+      >
+        {material}
+      </div>
+    ))}
+  </div>
+</div>
 
-              <p className="uppercase tracking-[0.26em] text-[11px] opacity-45 mb-5">
-                Materials
-              </p>
+{/* DESCRIPTION DETAILS */}
+<div className="border-t border-black/10 pt-8 mb-10">
+  <p className="uppercase tracking-[0.26em] text-[11px] opacity-45 mb-5">
+    Descripción
+  </p>
 
-              <div className="space-y-3">
-
-                {product.materials.map((material) => (
-
-                  <div
-                    key={material}
-                    className="text-sm opacity-70"
-                  >
-                    {material}
-                  </div>
-
-                ))}
-
-              </div>
-
-            </div>
-
-
-
+  <div className="space-y-3">
+    {product.details.map((detail) => (
+      <div
+        key={detail}
+        className="text-sm opacity-70"
+      >
+        {detail}
+      </div>
+    ))}
+  </div>
+</div>
             {/* BUTTON */}
 
             <button className="w-full bg-black text-white rounded-full py-5 uppercase tracking-[0.28em] text-[11px] hover:opacity-90 transition">

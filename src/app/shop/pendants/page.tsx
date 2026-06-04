@@ -1,23 +1,25 @@
 "use client";
 
 import Link from "next/link";
-
+import SelectionBadge from "@/components/SelectionBadge";
 const pendants = [
   {
     id: 1,
     slug: "moonface-pendant",
     name: "Moonface Pendant",
-    price: "79€",
+    price: "49,99€",
     editorial: "/images/products/colgante-moonface-editorial.png",
     worn: "/images/products/colgante-moonface-worn.png",
+    selection: true,
   },
   {
     id: 2,
     slug: "sunrise-pendant",
-    name: "Sunrise",
-    price: "59€",
+    name: "Sunrise Pendant",
+    price: "59,99€",
     editorial: "/images/products/sunrise-editorial.png",
     worn: "/images/products/sunrise-worn.png",
+    selection: true,
   },
 ];
 
@@ -67,36 +69,36 @@ export default function PendantsPage() {
 
           {/* PRODUCT */}
           {pendants.map((product) => (
-            <Link
-              href={`/shop/pendants/${product.slug}`}
-              key={product.id}
-              className="group relative overflow-hidden"
-            >
-              <img
-                src={product.editorial}
-                alt={product.name}
-                className="h-[300px] w-full object-cover transition duration-[1600ms] group-hover:opacity-0 md:h-[360px]"
-              />
+  <div key={product.id} className="group relative overflow-hidden">
+    <Link href={`/shop/pendants/${product.slug}`} className="block">
+      <img
+        src={product.editorial}
+        alt={product.name}
+        className="h-[300px] w-full object-cover transition duration-[1600ms] group-hover:opacity-0 md:h-[360px]"
+      />
 
-              <img
-                src={product.worn}
-                alt={product.name}
-                className="absolute inset-0 h-full w-full object-cover opacity-0 transition duration-[1600ms] group-hover:opacity-100"
-              />
+      <img
+        src={product.worn}
+        alt={product.name}
+        className="absolute inset-0 h-full w-full object-cover opacity-0 transition duration-[1600ms] group-hover:opacity-100"
+      />
 
-              <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-black/5 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-black/5 to-transparent" />
 
-              <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between">
-                <p className="text-[10px] uppercase tracking-[0.28em] text-white drop-shadow-md">
-                  {product.name} →
-                </p>
+      <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between">
+        <p className="text-[10px] uppercase tracking-[0.28em] text-white drop-shadow-md">
+          {product.name} →
+        </p>
 
-                <p className="text-[10px] uppercase tracking-[0.22em] text-white/85 drop-shadow-md">
-                  {product.price}
-                </p>
-              </div>
-            </Link>
-          ))}
+        <p className="text-[10px] uppercase tracking-[0.22em] text-white/85 drop-shadow-md">
+          {product.price}
+        </p>
+      </div>
+    </Link>
+
+    {product.selection && <SelectionBadge />}
+  </div>
+))}
         </div>
       </section>
     </main>

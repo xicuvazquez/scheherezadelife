@@ -4,18 +4,21 @@ import Link from "next/link";
 import { useState } from "react";
 import RelatedProducts from "@/components/RelatedProducts";
 const product = {
-  name: "Lovehoops",
+  name: "Greta Hoops",
 
-  price: "59€",
+  price: "69,99€",
 
   description:
-    "Selected silver objects shaped through light, texture and sculptural simplicity.",
+    "Pendientes de plata seleccionados por su forma irregular, ligereza y presencia orgánica.",
 
   materials: [
-    "Sterling Silver 925",
-    "Hand polished finish",
+    "Plata de ley 925",
   ],
-
+details: [
+    "Hechos a mano",
+    "5 cm de largo",
+    "Irregulares y únicos",
+  ],
   editorial: "/images/products/lovehoops-editorial.png",
 
   worn: "/images/products/lovehoops-worn.png",
@@ -160,7 +163,41 @@ export default function LovehoopsPage() {
             <div className="text-[2rem] tracking-[-0.04em] mb-10">
               {product.price}
             </div>
+            {/* MATERIALS */}
+<div className="border-t border-black/10 pt-8 mb-10">
+  <p className="uppercase tracking-[0.26em] text-[11px] opacity-45 mb-5">
+    Materiales
+  </p>
 
+  <div className="space-y-3">
+    {product.materials.map((material) => (
+      <div
+        key={material}
+        className="text-sm opacity-70"
+      >
+        {material}
+      </div>
+    ))}
+  </div>
+</div>
+
+{/* DESCRIPTION DETAILS */}
+<div className="border-t border-black/10 pt-8 mb-10">
+  <p className="uppercase tracking-[0.26em] text-[11px] opacity-45 mb-5">
+    Descripción
+  </p>
+
+  <div className="space-y-3">
+    {product.details.map((detail) => (
+      <div
+        key={detail}
+        className="text-sm opacity-70"
+      >
+        {detail}
+      </div>
+    ))}
+  </div>
+</div>    
 
 
             <div className="border-t border-black/10 pt-8 mb-10">

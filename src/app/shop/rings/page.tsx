@@ -1,32 +1,50 @@
 "use client";
 
 import Link from "next/link";
-
+import SelectionBadge from "@/components/SelectionBadge";
 const rings = [
   {
     id: 1,
     slug: "cara-ring",
-    name: "Cara Ring",
-    price: "39€",
+    name: "Nostalgia Ring",
+    price: "39,99€",
     editorial: "/images/products/cararing-editorial.png",
     worn: "/images/products/cararing-worn.png",
   },
   {
     id: 2,
     slug: "fortuna-ring",
-    name: "Fortuna Ring",
-    price: "69€",
+    name: "Venus Ring",
+    price: "59,99€",
     editorial: "/images/products/fortuna-editorial.png",
     worn: "/images/products/fortuna-worn.png",
+    selection: true,
   },
   {
     id: 3,
     slug: "mamba-ring",
     name: "Mamba Ring",
-    price: "89€",
+    price: "59,99€",
     editorial: "/images/products/mamba-editorial.png",
     worn: "/images/products/mamba-worn.png",
+    selection: true,
   },
+  {
+  id: 4,
+  slug: "dream-ring",
+  name: "Dream Ring",
+  price: "19,99€",
+  editorial: "/images/products/dream-ring-editorial.png",
+  worn: "/images/products/dream-ring-worn.png",
+},
+{
+  id: 5,
+  slug: "wave-ring",
+  name: "Wave Ring",
+  price: "19,99€",
+  editorial: "/images/products/wave-ring-editorial.png",
+  worn: "/images/products/wave-ring-worn.png",
+},
 ];
 
 export default function RingsPage() {
@@ -74,63 +92,67 @@ export default function RingsPage() {
           </div>
 
           {/* FEATURED PRODUCT */}
-          <Link
-            href={`/shop/rings/${rings[0].slug}`}
-            className="group relative overflow-hidden"
-          >
-            <img
-              src={rings[0].editorial}
-              alt={rings[0].name}
-              className="h-[300px] w-full object-cover transition duration-[1600ms] group-hover:opacity-0 md:h-[360px]"
-            />
-            <img
-              src={rings[0].worn}
-              alt={rings[0].name}
-              className="absolute inset-0 h-full w-full object-cover opacity-0 transition duration-[1600ms] group-hover:opacity-100"
-            />
+<div className="group relative overflow-hidden">
+  <Link href={`/shop/rings/${rings[0].slug}`} className="block">
+    <img
+      src={rings[0].editorial}
+      alt={rings[0].name}
+      className="h-[300px] w-full object-cover transition duration-[1600ms] group-hover:opacity-0 md:h-[360px]"
+    />
 
-            <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-black/5 to-transparent" />
+    <img
+      src={rings[0].worn}
+      alt={rings[0].name}
+      className="absolute inset-0 h-full w-full object-cover opacity-0 transition duration-[1600ms] group-hover:opacity-100"
+    />
 
-            <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between">
-              <p className="text-[10px] uppercase tracking-[0.28em] text-white drop-shadow-md">
-                {rings[0].name} →
-              </p>
-              <p className="text-[10px] uppercase tracking-[0.22em] text-white/85 drop-shadow-md">
-                {rings[0].price}
-              </p>
-            </div>
-          </Link>
+    <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-black/5 to-transparent" />
 
-          {/* SECONDARY PRODUCTS */}
-          {rings.slice(1).map((product) => (
-            <Link
-              href={`/shop/rings/${product.slug}`}
-              key={product.id}
-              className="group relative overflow-hidden"
-            >
-              <img
-                src={product.editorial}
-                alt={product.name}
-                className="h-[250px] w-full object-cover transition duration-[1600ms] group-hover:opacity-0 md:h-[280px]"
-              />
-              <img
-                src={product.worn}
-                alt={product.name}
-                className="absolute inset-0 h-full w-full object-cover opacity-0 transition duration-[1600ms] group-hover:opacity-100"
-              />
+    <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between">
+      <p className="text-[10px] uppercase tracking-[0.28em] text-white drop-shadow-md">
+        {rings[0].name} →
+      </p>
 
-              <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-black/5 to-transparent" />
+      <p className="text-[10px] uppercase tracking-[0.22em] text-white/85 drop-shadow-md">
+        {rings[0].price}
+      </p>
+    </div>
+  </Link>
 
-              <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between">
-                <p className="text-[10px] uppercase tracking-[0.28em] text-white drop-shadow-md">
-                  {product.name} →
-                </p>
-                <p className="text-[10px] uppercase tracking-[0.22em] text-white/85 drop-shadow-md">
-                  {product.price}
-                </p>
-              </div>
-            </Link>
-          ))}
+  {rings[0].selection && <SelectionBadge />}
+</div>
+         {/* SECONDARY PRODUCTS */}
+{rings.slice(1).map((product) => (
+  <div key={product.id} className="group relative overflow-hidden">
+    <Link href={`/shop/rings/${product.slug}`} className="block">
+      <img
+        src={product.editorial}
+        alt={product.name}
+        className="h-[250px] w-full object-cover transition duration-[1600ms] group-hover:opacity-0 md:h-[280px]"
+      />
+
+      <img
+        src={product.worn}
+        alt={product.name}
+        className="absolute inset-0 h-full w-full object-cover opacity-0 transition duration-[1600ms] group-hover:opacity-100"
+      />
+
+      <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-black/5 to-transparent" />
+
+      <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between">
+        <p className="text-[10px] uppercase tracking-[0.28em] text-white drop-shadow-md">
+          {product.name} →
+        </p>
+
+        <p className="text-[10px] uppercase tracking-[0.22em] text-white/85 drop-shadow-md">
+          {product.price}
+        </p>
+      </div>
+    </Link>
+
+    {product.selection && <SelectionBadge />}
+  </div>
+))}
         </div>
       </section>
     </main>

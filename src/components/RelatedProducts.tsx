@@ -62,6 +62,33 @@ const allProducts = [
     editorial: "/images/products/colgante-moonface-editorial.png",
     worn: "/images/products/colgante-moonface-worn.png",
   },
+  {
+  slug: "dream-ring",
+  category: "rings",
+  name: "Dream Ring",
+  price: "19,99€",
+  href: "/shop/rings/dream-ring",
+  editorial: "/images/products/dream-ring-editorial.png",
+  worn: "/images/products/dream-ring-worn.png",
+},
+{
+  slug: "wave-ring",
+  category: "rings",
+  name: "Wave Ring",
+  price: "19,99€",
+  href: "/shop/rings/wave-ring",
+  editorial: "/images/products/wave-ring-editorial.png",
+  worn: "/images/products/wave-ring-worn.png",
+},
+{
+  slug: "samantha-bracelet",
+  category: "bracelets",
+  name: "Samantha Bracelet",
+  price: "Pendiente",
+  href: "/shop/bracelets/samantha-bracelet",
+  editorial: "/images/products/samantha-bracelet-editorial.png",
+  worn: "/images/products/samantha-bracelet-worn.png",
+},
 ];
 
 type Props = {

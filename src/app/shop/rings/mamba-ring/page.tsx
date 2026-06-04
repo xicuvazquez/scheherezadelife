@@ -7,16 +7,19 @@ import RelatedProducts from "@/components/RelatedProducts";
 const product = {
   name: "Mamba Ring",
 
-  price: "89€",
+  price: "59,99€",
 
   description:
-    "A sculptural silver object selected for its bold silhouette and quiet presence.",
-
+     "Anillo de serpiente en plata maciza, seleccionado por su silueta orgánica, su carácter simbólico y su presencia visual.",
   materials: [
-    "Sterling Silver 925",
-    "Hand polished finish",
+    "Plata de ley 925 maciza",
   ],
-
+ details: [
+    "Hecho a mano",
+    "Anillo con forma de serpiente",
+    "Talla US 7",
+    "Ligeramente ajustable",
+  ],
   editorial: "/images/products/mamba-editorial.png",
 
   worn: "/images/products/mamba-worn.png",
@@ -140,32 +143,41 @@ export default function MambaRingPage() {
 
 
 
-            {/* MATERIALS */}
+           {/* MATERIALS */}
+<div className="border-t border-black/10 pt-8 mb-10">
+  <p className="uppercase tracking-[0.26em] text-[11px] opacity-45 mb-5">
+    Materiales
+  </p>
 
-            <div className="border-t border-black/10 pt-8 mb-10">
+  <div className="space-y-3">
+    {product.materials.map((material) => (
+      <div
+        key={material}
+        className="text-sm opacity-70"
+      >
+        {material}
+      </div>
+    ))}
+  </div>
+</div>
 
-              <p className="uppercase tracking-[0.26em] text-[11px] opacity-45 mb-5">
-                Materials
-              </p>
+{/* DESCRIPTION DETAILS */}
+<div className="border-t border-black/10 pt-8 mb-10">
+  <p className="uppercase tracking-[0.26em] text-[11px] opacity-45 mb-5">
+    Descripción
+  </p>
 
-              <div className="space-y-3">
-
-                {product.materials.map((material) => (
-
-                  <div
-                    key={material}
-                    className="text-sm opacity-70"
-                  >
-                    {material}
-                  </div>
-
-                ))}
-
-              </div>
-
-            </div>
-
-
+  <div className="space-y-3">
+    {product.details.map((detail) => (
+      <div
+        key={detail}
+        className="text-sm opacity-70"
+      >
+        {detail}
+      </div>
+    ))}
+  </div>
+</div>
 
             {/* BUTTON */}
 

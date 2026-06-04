@@ -1,24 +1,25 @@
 "use client";
 
 import Link from "next/link";
-
+import SelectionBadge from "@/components/SelectionBadge";
 const earrings = [
-  {
-    id: 1,
-    slug: "abstra-earrings",
-    name: "Abstra Earrings",
-    price: "49€",
-    editorial: "/images/products/abstra-editorial.png",
-    worn: "/images/products/abstra-worn.png",
-  },
+ {
+  id: 1,
+  slug: "abstra-earrings",
+  name: "Zoco Earrings",
+  price: "69,99€",
+  editorial: "/images/products/abstra-editorial.png",
+  worn: "/images/products/abstra-worn.png",
+},
 
   {
     id: 2,
     slug: "lovehoops",
-    name: "Lovehoops",
-    price: "59€",
+    name: "Greta Hoops",
+    price: "69,99€",
     editorial: "/images/products/lovehoops-editorial.png",
     worn: "/images/products/lovehoops-worn.png",
+    selection: true,
   },
 ];
 
@@ -101,37 +102,37 @@ export default function EarringsPage() {
           </Link>
 
           {/* SECONDARY PRODUCT */}
-          {earrings.slice(1).map((product) => (
-            <Link
-              href={`/shop/earrings/${product.slug}`}
-              key={product.id}
-              className="group relative overflow-hidden"
-            >
-              <img
-                src={product.editorial}
-                alt={product.name}
-                className="h-[250px] w-full object-cover transition duration-[1600ms] group-hover:opacity-0 md:h-[280px]"
-              />
+{earrings.slice(1).map((product) => (
+  <div key={product.id} className="group relative overflow-hidden">
+    <Link href={`/shop/earrings/${product.slug}`} className="block">
+      <img
+        src={product.editorial}
+        alt={product.name}
+        className="h-[300px] w-full object-cover transition duration-[1600ms] group-hover:opacity-0 md:h-[360px]"
+      />
 
-              <img
-                src={product.worn}
-                alt={product.name}
-                className="absolute inset-0 h-full w-full object-cover opacity-0 transition duration-[1600ms] group-hover:opacity-100"
-              />
+      <img
+        src={product.worn}
+        alt={product.name}
+        className="absolute inset-0 h-full w-full object-cover opacity-0 transition duration-[1600ms] group-hover:opacity-100"
+      />
 
-              <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-black/5 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-black/5 to-transparent" />
 
-              <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between">
-                <p className="text-[10px] uppercase tracking-[0.28em] text-white drop-shadow-md">
-                  {product.name} →
-                </p>
+      <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between">
+        <p className="text-[10px] uppercase tracking-[0.28em] text-white drop-shadow-md">
+          {product.name} →
+        </p>
 
-                <p className="text-[10px] uppercase tracking-[0.22em] text-white/85 drop-shadow-md">
-                  {product.price}
-                </p>
-              </div>
-            </Link>
-          ))}
+        <p className="text-[10px] uppercase tracking-[0.22em] text-white/85 drop-shadow-md">
+          {product.price}
+        </p>
+      </div>
+    </Link>
+
+    {product.selection && <SelectionBadge />}
+  </div>
+))}
         </div>
       </section>
     </main>

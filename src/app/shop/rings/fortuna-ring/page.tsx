@@ -4,18 +4,22 @@ import Link from "next/link";
 import { useState } from "react";
 import RelatedProducts from "@/components/RelatedProducts";
 const product = {
-  name: "Fortuna Ring",
+  name: "Venus Ring",
 
-  price: "69€",
+  price: "59,99€",
 
   description:
-    "A sculptural silver object defined by texture, light and imperfect movement.",
+    "Anillo de plata maciza seleccionado por su textura irregular, su volumen orgánico y su presencia escultórica.",
 
   materials: [
-    "Sterling Silver 925",
-    "Hand polished finish",
+     "Plata de ley 925 maciza",
   ],
-
+ details: [
+    "Tallado a mano desde cera",
+    "Textura irregular",
+    "Talla US 7 1/2",
+    "Diseño abierto con cierto ajuste",
+  ],
   editorial: "/images/products/fortuna-editorial.png",
 
   worn: "/images/products/fortuna-worn.png",
@@ -140,31 +144,40 @@ export default function MambaRingPage() {
 
 
             {/* MATERIALS */}
+<div className="border-t border-black/10 pt-8 mb-10">
+  <p className="uppercase tracking-[0.26em] text-[11px] opacity-45 mb-5">
+    Materiales
+  </p>
 
-            <div className="border-t border-black/10 pt-8 mb-10">
+  <div className="space-y-3">
+    {product.materials.map((material) => (
+      <div
+        key={material}
+        className="text-sm opacity-70"
+      >
+        {material}
+      </div>
+    ))}
+  </div>
+</div>
 
-              <p className="uppercase tracking-[0.26em] text-[11px] opacity-45 mb-5">
-                Materials
-              </p>
+{/* DESCRIPTION DETAILS */}
+<div className="border-t border-black/10 pt-8 mb-10">
+  <p className="uppercase tracking-[0.26em] text-[11px] opacity-45 mb-5">
+    Descripción
+  </p>
 
-              <div className="space-y-3">
-
-                {product.materials.map((material) => (
-
-                  <div
-                    key={material}
-                    className="text-sm opacity-70"
-                  >
-                    {material}
-                  </div>
-
-                ))}
-
-              </div>
-
-            </div>
-
-
+  <div className="space-y-3">
+    {product.details.map((detail) => (
+      <div
+        key={detail}
+        className="text-sm opacity-70"
+      >
+        {detail}
+      </div>
+    ))}
+  </div>
+</div>
 
             {/* BUTTON */}
 
