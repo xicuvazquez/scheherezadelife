@@ -2,7 +2,7 @@
 import Navbar from "@/components/Navbar";
 import Link from "next/link";
 import { useState } from "react";
-import RelatedProducts from "@/components/RelatedProducts";
+
 const product = {
   name: "Greta Hoops",
 
@@ -237,10 +237,6 @@ export default function LovehoopsPage() {
 
       </section>
 
-<RelatedProducts
-  category="earrings"
-  currentProduct="lovehoops"
-/>
 
     </main>
 
