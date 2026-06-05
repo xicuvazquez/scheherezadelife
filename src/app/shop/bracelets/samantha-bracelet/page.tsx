@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import RelatedProducts from "@/components/RelatedProducts";
+
 const product = {
   name: "Samantha Bracelet",
 
@@ -146,7 +146,7 @@ export default function SamanthaBraceletPage() {
         </div>
       </section>
 
-      <RelatedProducts category="bracelets" currentProduct="samantha-bracelet" />
+     
     </main>
   );
 }

@@ -195,8 +195,8 @@ export default function AbstraEarringsPage() {
 
       </section>
 
-<
-/>
+
+
 
     </main>
 
