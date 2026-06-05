@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import RelatedProducts from "@/components/RelatedProducts";
 
 const product = {
   name: "Dream Ring",
@@ -147,7 +146,7 @@ export default function DreamRingPage() {
         </div>
       </section>
 
-      <RelatedProducts category="rings" currentProduct="dream-ring" />
+      
     </main>
   );
 }

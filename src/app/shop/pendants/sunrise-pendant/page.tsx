@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import RelatedProducts from "@/components/RelatedProducts";
+
 
 const product = {
   name: "Sunrise Pendant",
@@ -144,7 +144,7 @@ export default function SunrisePendantPage() {
         </div>
       </section>
 
-      <RelatedProducts category="pendants" currentProduct="sunrise-pendant" />
+     
     </main>
   );
 }

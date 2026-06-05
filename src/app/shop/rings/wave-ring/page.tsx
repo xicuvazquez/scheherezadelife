@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import RelatedProducts from "@/components/RelatedProducts";
+
 
 const product = {
   name: "Wave Ring",
@@ -147,7 +147,7 @@ export default function WaveRingPage() {
         </div>
       </section>
 
-      <RelatedProducts category="rings" currentProduct="wave-ring" />
+      
     </main>
   );
 }

@@ -46,8 +46,17 @@ const selectionProducts = [
     price: "59€",
     editorial: "/images/products/lovehoops-editorial.png",
     worn: "/images/products/lovehoops-worn.png",
+    
   },
-  
+  {
+  id: 6,
+  slug: "samantha-bracelet",
+  name: "Samantha Bracelet",
+  price: "39,99€",
+  href: "/shop/bracelets/samantha-bracelet",
+  editorial: "/images/products/samantha-bracelet-editorial.png",
+  worn: "/images/products/samantha-bracelet-worn.png",
+},
 ];
 
 export default function ScheherezadeSelectionPage() {

@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { useState } from "react";
 import RelatedProducts from "@/components/RelatedProducts";
-
 const product = {
   name: "Samantha Bracelet",
 

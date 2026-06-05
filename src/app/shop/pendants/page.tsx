@@ -21,6 +21,14 @@ const pendants = [
     worn: "/images/products/sunrise-worn.png",
     selection: true,
   },
+  {
+  id: 3,
+  slug: "noirchain-pendant",
+  name: "Noir Chain",
+  price: "19,99€",
+  editorial: "/images/products/noirchain-pendant-editorial.png",
+  worn: "/images/products/noirchain-pendant-worn.png",
+},
 ];
 
 export default function PendantsPage() {

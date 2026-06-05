@@ -2,7 +2,7 @@
 import Navbar from "@/components/Navbar";
 import Link from "next/link";
 import { useState } from "react";
-import RelatedProducts from "@/components/RelatedProducts";
+
 const product = {
   name: "Moonface Pendant",
 
@@ -193,10 +193,8 @@ export default function MoonfacePendantPage() {
 
       </section>
 
-<RelatedProducts
-  category="pendants"
-  currentProduct="moonface-pendant"
-/>
+
+
 
     </main>
 

@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import RelatedProducts from "@/components/RelatedProducts";
 
 const product = {
   name: "Arcoíris Bracelet",
@@ -147,7 +146,7 @@ export default function PulseraArcoirisPage() {
         </div>
       </section>
 
-      <RelatedProducts category="bracelets" currentProduct="pulsera-arcoiris" />
+   
     </main>
   );
 }

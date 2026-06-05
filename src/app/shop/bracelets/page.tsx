@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-
+import SelectionBadge from "@/components/SelectionBadge";
 const bracelets = [
   {
     id: 1,
@@ -67,38 +67,40 @@ export default function BraceletsPage() {
             </p>
           </div>
 
-          {/* PRODUCT */}
-          {bracelets.map((product) => (
-            <Link
-              href={`/shop/bracelets/${product.slug}`}
-              key={product.id}
-              className="group relative overflow-hidden"
-            >
-              <img
-                src={product.editorial}
-                alt={product.name}
-                className="h-[300px] w-full object-cover transition duration-[1600ms] group-hover:opacity-0 md:h-[360px]"
-              />
+         {/* PRODUCT */}
+{bracelets.map((product) => (
+  <Link
+    href={`/shop/bracelets/${product.slug}`}
+    key={product.id}
+    className="group relative block overflow-hidden"
+  >
+    {product.selection && <SelectionBadge />}
 
-              <img
-                src={product.worn}
-                alt={product.name}
-                className="absolute inset-0 h-full w-full object-cover opacity-0 transition duration-[1600ms] group-hover:opacity-100"
-              />
+    <img
+      src={product.editorial}
+      alt={product.name}
+      className="h-[300px] w-full object-cover transition duration-[1600ms] group-hover:opacity-0 md:h-[360px]"
+    />
 
-              <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-black/5 to-transparent" />
+    <img
+      src={product.worn}
+      alt={product.name}
+      className="absolute inset-0 h-full w-full object-cover opacity-0 transition duration-[1600ms] group-hover:opacity-100"
+    />
 
-              <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between">
-                <p className="text-[10px] uppercase tracking-[0.28em] text-white drop-shadow-md">
-                  {product.name} →
-                </p>
+    <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-black/5 to-transparent" />
 
-                <p className="text-[10px] uppercase tracking-[0.22em] text-white/85 drop-shadow-md">
-                  {product.price}
-                </p>
-              </div>
-            </Link>
-          ))}
+    <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between">
+      <p className="text-[10px] uppercase tracking-[0.28em] text-white drop-shadow-md">
+        {product.name} →
+      </p>
+
+      <p className="text-[10px] uppercase tracking-[0.22em] text-white/85 drop-shadow-md">
+        {product.price}
+      </p>
+    </div>
+  </Link>
+))}
         </div>
       </section>
     </main>
